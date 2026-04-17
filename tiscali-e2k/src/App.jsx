@@ -1,1 +1,85 @@
-{"data":"aW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7CmltcG9ydCBMaXN0aW5vIGZyb20gJy4vY29tcG9uZW50cy9MaXN0aW5vLmpzeCc7CmltcG9ydCBDb25maWd1cmF0b3JlIGZyb20gJy4vY29tcG9uZW50cy9Db25maWd1cmF0b3JlLmpzeCc7CmltcG9ydCBNdWx0aW1lZGlhIGZyb20gJy4vY29tcG9uZW50cy9NdWx0aW1lZGlhLmpzeCc7CmltcG9ydCBOb3RpZmljYU1lc2UgZnJvbSAnLi9jb21wb25lbnRzL05vdGlmaWNhTWVzZS5qc3gnOwoKY29uc3QgVEFCUyA9IFsKICB7IGlkOiAnbGlzdGlubycsICAgICAgIGxhYmVsOiAnTGlzdGlubycsICAgICAgIGljb246ICfwn5OLJyB9LAogIHsgaWQ6ICdjb25maWd1cmF0b3JlJywgbGFiZWw6ICdDb25maWd1cmF0b3JlJywgaWNvbjogJ+Kame+4jycgfSwKICB7IGlkOiAnbXVsdGltZWRpYScsICAgIGxhYmVsOiAnTWF0ZXJpYWxpJywgICAgICBpY29uOiAn8J+TgScgfSwKXTsKCi8vIExvZ28gVGlzY2FsaSByZWFsZQpmdW5jdGlvbiBUaXNjYWxpTG9nbygpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgPGltZwogICAgICAgIHNyYz0iL2xvZ2hpL2xvZ28tdGlzY2FsaS5wbmciCiAgICAgICAgYWx0PSJUaXNjYWxpIgogICAgICAgIGNsYXNzTmFtZT0iaC05IG9iamVjdC1jb250YWluIgogICAgICAvPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iaGlkZGVuIHNtOmZsZXggaXRlbXMtY2VudGVyIGdhcC0yIGJvcmRlci1sIGJvcmRlci1ncmF5LTIwMCBwbC0zIj4KICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtZ3JheS01MDAgZm9udC1saWdodCB0ZXh0LWJhc2UiPnN0YXRpb248L3NwYW4+CiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWdyYXktMzAwIj58PC9zcGFuPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1ncmF5LTUwMCBmb250LWxpZ2h0IHRleHQtc20iPkFyZWEgTWFuYWdlcjwvc3Bhbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBcHAoKSB7CiAgY29uc3QgW3RhYiwgc2V0VGFiXSA9IHVzZVN0YXRlKCdsaXN0aW5vJyk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLWgtc2NyZWVuIGZsZXggZmxleC1jb2wgb3ZlcmZsb3cteC1oaWRkZW4iIHN0eWxlPXt7IGJhY2tncm91bmRDb2xvcjogJyNGMkYyRjInIH19PgogICAgICA8Tm90aWZpY2FNZXNlIC8+CgogICAgICB7Lyog4pSA4pSAIEhFQURFUiBCSUFOQ08gY29uIGxvZ28g4pSA4pSAICovfQogICAgICA8aGVhZGVyIGNsYXNzTmFtZT0iYmctd2hpdGUgYm9yZGVyLWIgYm9yZGVyLWdyYXktMjAwIHNoYWRvdy1zbSBzdGlja3kgdG9wLTAgei01MCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTd4bCBteC1hdXRvIHB4LTQgc206cHgtNiBsZzpweC04Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHktNCI+CiAgICAgICAgICAgIDxUaXNjYWxpTG9nbyAvPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQteHMgdGV4dC1ncmF5LTQwMCBoaWRkZW4gc206YmxvY2siPlVzbyBpbnRlcm5vIHJpc2VydmF0byDCtyBBcHJpbGUgMjAyNjwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICB7Lyog4pSA4pSAIE5BViBCQVIgVklPTEEg4oCUIHN0aWxlIFN0YXRpb24g4pSA4pSAICovfQogICAgICAgIDxuYXYgY2xhc3NOYW1lPSJiZy10aXNjYWxpLTYwMCI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWF4LXctN3hsIG14LWF1dG8gcHgtNCBzbTpweC02IGxnOnB4LTgiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBvdmVyZmxvdy14LWF1dG8gc2Nyb2xsYmFyLW5vbmUiPgogICAgICAgICAgICAgIHtUQUJTLm1hcCh0ID0+ICgKICAgICAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICAgICAga2V5PXt0LmlkfQogICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRUYWIodC5pZCl9CiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17YGZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHB4LTYgcHktMy41IHRleHQtc20gZm9udC1zZW1pYm9sZCB3aGl0ZXNwYWNlLW5vd3JhcCBmbGV4LXNocmluay0wIHRyYW5zaXRpb24tYWxsIGJvcmRlci1iLTIKICAgICAgICAgICAgICAgICAgICAke3RhYiA9PT0gdC5pZAogICAgICAgICAgICAgICAgICAgICAgPyAnYmctd2hpdGUvMTAgdGV4dC13aGl0ZSBib3JkZXItd2hpdGUnCiAgICAgICAgICAgICAgICAgICAgICA6ICd0ZXh0LXdoaXRlLzcwIGJvcmRlci10cmFuc3BhcmVudCBob3Zlcjp0ZXh0LXdoaXRlIGhvdmVyOmJnLXdoaXRlLzEwJwogICAgICAgICAgICAgICAgICAgIH1gfQogICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICA8c3Bhbj57dC5pY29ufTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPHNwYW4+e3QubGFiZWx9PC9zcGFuPgogICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9uYXY+CiAgICAgIDwvaGVhZGVyPgoKICAgICAgey8qIOKUgOKUgCBDT05URU5VVE8g4pSA4pSAICovfQogICAgICA8bWFpbiBjbGFzc05hbWU9ImZsZXgtMSB3LWZ1bGwgbWF4LXctN3hsIG14LWF1dG8gcHgtNCBzbTpweC02IGxnOnB4LTggcHktOCBvdmVyZmxvdy14LWhpZGRlbiI+CiAgICAgICAge3RhYiA9PT0gJ2xpc3Rpbm8nICAgICAgICYmIDxMaXN0aW5vIC8+fQogICAgICAgIHt0YWIgPT09ICdjb25maWd1cmF0b3JlJyAmJiA8Q29uZmlndXJhdG9yZSAvPn0KICAgICAgICB7dGFiID09PSAnbXVsdGltZWRpYScgICAgJiYgPE11bHRpbWVkaWEgLz59CiAgICAgIDwvbWFpbj4KCiAgICAgIHsvKiDilIDilIAgRk9PVEVSIOKUgOKUgCAqL30KICAgICAgPGZvb3RlciBjbGFzc05hbWU9ImJnLXdoaXRlIGJvcmRlci10IGJvcmRlci1ncmF5LTIwMCBweS00IG10LWF1dG8iPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy03eGwgbXgtYXV0byBweC00IHNtOnB4LTYgbGc6cHgtOCI+CiAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1ncmF5LTQwMCB0ZXh0LWNlbnRlciI+VGlzY2FsaSBFMksgwrcgQXJlYSBNYW5hZ2VyIFRvb2wgwrcgVXNvIGludGVybm8gcmlzZXJ2YXRvPC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L2Zvb3Rlcj4KICAgIDwvZGl2PgogICk7Cn0K"}
+import { useState } from 'react';
+import Listino from './components/Listino.jsx';
+import Configuratore from './components/Configuratore.jsx';
+import Multimedia from './components/Multimedia.jsx';
+import NotificaMese from './components/NotificaMese.jsx';
+
+const TABS = [
+  { id: 'listino',       label: 'Listino',       icon: '📋' },
+  { id: 'configuratore', label: 'Configuratore', icon: '⚙️' },
+  { id: 'multimedia',    label: 'Materiali',      icon: '📁' },
+];
+
+// Logo Tiscali reale
+function TiscaliLogo() {
+  return (
+    <div className="flex items-center gap-3">
+      <img
+        src="/loghi/logo-tiscali.png"
+        alt="Tiscali"
+        className="h-9 object-contain"
+      />
+      <div className="hidden sm:flex items-center gap-2 border-l border-gray-200 pl-3">
+        <span className="text-gray-500 font-light text-base">station</span>
+        <span className="text-gray-300">|</span>
+        <span className="text-gray-500 font-light text-sm">Area Manager</span>
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  const [tab, setTab] = useState('listino');
+
+  return (
+    <div className="min-h-screen flex flex-col overflow-x-hidden" style={{ backgroundColor: '#F2F2F2' }}>
+      <NotificaMese />
+
+      {/* ── HEADER BIANCO con logo ── */}
+      <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-4">
+            <TiscaliLogo />
+            <span className="text-xs text-gray-400 hidden sm:block">Uso interno riservato · Aprile 2026</span>
+          </div>
+        </div>
+
+        {/* ── NAV BAR VIOLA — stile Station ── */}
+        <nav className="bg-tiscali-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex overflow-x-auto scrollbar-none">
+              {TABS.map(t => (
+                <button
+                  key={t.id}
+                  onClick={() => setTab(t.id)}
+                  className={`flex items-center gap-2 px-6 py-3.5 text-sm font-semibold whitespace-nowrap flex-shrink-0 transition-all border-b-2
+                    ${tab === t.id
+                      ? 'bg-white/10 text-white border-white'
+                      : 'text-white/70 border-transparent hover:text-white hover:bg-white/10'
+                    }`}
+                >
+                  <span>{t.icon}</span>
+                  <span>{t.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* ── CONTENUTO ── */}
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 overflow-x-hidden">
+        {tab === 'listino'       && <Listino />}
+        {tab === 'configuratore' && <Configuratore />}
+        {tab === 'multimedia'    && <Multimedia />}
+      </main>
+
+      {/* ── FOOTER ── */}
+      <footer className="bg-white border-t border-gray-200 py-4 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs text-gray-400 text-center">Tiscali E2K · Area Manager Tool · Uso interno riservato</p>
+        </div>
+      </footer>
+    </div>
+  );
+}

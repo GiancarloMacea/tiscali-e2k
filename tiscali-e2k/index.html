@@ -1,1 +1,42 @@
-{"data":"PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9Iml0Ij4KICA8aGVhZD4KICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04IiAvPgogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiIC8+CiAgICAKICAgIDwhLS0gUFdBIC0tPgogICAgPGxpbmsgcmVsPSJtYW5pZmVzdCIgaHJlZj0iL21hbmlmZXN0Lmpzb24iIC8+CiAgICA8bWV0YSBuYW1lPSJ0aGVtZS1jb2xvciIgY29udGVudD0iIzRBM0Y4RSIgLz4KICAgIDxsaW5rIHJlbD0iYXBwbGUtdG91Y2gtaWNvbiIgaHJlZj0iL2ljb24tMTkyLnBuZyIgLz4KICAgIDxtZXRhIG5hbWU9ImFwcGxlLW1vYmlsZS13ZWItYXBwLWNhcGFibGUiIGNvbnRlbnQ9InllcyIgLz4KICAgIDxtZXRhIG5hbWU9ImFwcGxlLW1vYmlsZS13ZWItYXBwLXN0YXR1cy1iYXItc3R5bGUiIGNvbnRlbnQ9ImJsYWNrLXRyYW5zbHVjZW50IiAvPgogICAgPG1ldGEgbmFtZT0iYXBwbGUtbW9iaWxlLXdlYi1hcHAtdGl0bGUiIGNvbnRlbnQ9IlRpc2NhbGkgRTJLIiAvPgogICAgCiAgICA8IS0tIEZhdmljb24gLS0+CiAgICA8bGluayByZWw9Imljb24iIHR5cGU9ImltYWdlL3BuZyIgaHJlZj0iL2Zhdmljb24ucG5nIiAvPgogICAgCiAgICA8dGl0bGU+VGlzY2FsaSBFMksg4oCUIEFyZWEgTWFuYWdlcjwvdGl0bGU+CiAgPC9oZWFkPgogIDxib2R5PgogICAgPGRpdiBpZD0icm9vdCI+PC9kaXY+CiAgICA8c2NyaXB0IHR5cGU9Im1vZHVsZSIgc3JjPSIvc3JjL21haW4uanN4Ij48L3NjcmlwdD4KCiAgICA8IS0tIFNlcnZpY2UgV29ya2VyICsgY2FjaGUgY2xlYXIgYWxsYSBjaGl1c3VyYSAtLT4KICAgIDxzY3JpcHQ+CiAgICAgIGlmICgnc2VydmljZVdvcmtlcicgaW4gbmF2aWdhdG9yKSB7CiAgICAgICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLCAoKSA9PiB7CiAgICAgICAgICBuYXZpZ2F0b3Iuc2VydmljZVdvcmtlci5yZWdpc3RlcignL3N3LmpzJykuY2F0Y2goKCkgPT4ge30pOwogICAgICAgIH0pOwoKICAgICAgICAvLyBQdWxpc2NlIGxhIGNhY2hlIHF1YW5kbyBzaSBjaGl1ZGUvbmFzY29uZGUgbCdhcHAKICAgICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCd2aXNpYmlsaXR5Y2hhbmdlJywgKCkgPT4gewogICAgICAgICAgaWYgKGRvY3VtZW50LnZpc2liaWxpdHlTdGF0ZSA9PT0gJ2hpZGRlbicpIHsKICAgICAgICAgICAgbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIucmVhZHkudGhlbihyZWcgPT4gewogICAgICAgICAgICAgIGlmIChyZWcuYWN0aXZlKSByZWcuYWN0aXZlLnBvc3RNZXNzYWdlKCdDTEVBUl9DQUNIRScpOwogICAgICAgICAgICB9KTsKICAgICAgICAgIH0KICAgICAgICB9KTsKICAgICAgfQogICAgPC9zY3JpcHQ+CiAgPC9ib2R5Pgo8L2h0bWw+Cg=="}
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4A3F8E" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Tiscali E2K" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <title>Tiscali E2K — Area Manager</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Service Worker + cache clear alla chiusura -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+
+        // Pulisce la cache quando si chiude/nasconde l'app
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            navigator.serviceWorker.ready.then(reg => {
+              if (reg.active) reg.active.postMessage('CLEAR_CACHE');
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

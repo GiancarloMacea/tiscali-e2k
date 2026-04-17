@@ -1,1 +1,201 @@
-{"data":"Y29uc3QgVkFOVEFHR0kgPSBbCiAgewogICAgaWQ6IDEsIGljb246ICfwn5O2JywgYmFkZ2U6ICdRdWFsaXTDoCByZXRlJywgY29sb3I6ICdibHVlJywKICAgIHRpdG9sbzogJ1JldGUgVElNIG5vbiBjYXBwYXRhICsgNUcgaW5jbHVzbycsCiAgICBkZXNjcml6aW9uZTogJ1Rpc2NhbGkgTW9iaWxlIG5hdmlnYSBzdWxsYSByZXRlIFRJTSwgbGEgbWlnbGlvcmUgcmV0ZSBtb2JpbGUgaXRhbGlhbmEuIE5vbiBjYXBwYXRhOiBpbCBjbGllbnRlIGhhIGxlIHN0ZXNzZSB2ZWxvY2l0w6AgNUcgZGVnbGkgYWx0cmkgb3BlcmF0b3JpIFRJTSwgc2VuemEgdGhyb3R0bGluZy4gSWwgNUcgw6ggaW5jbHVzbyBpbiB0dXR0ZSBsZSBvZmZlcnRlIHNlbnphIGNvc3RvIGFnZ2l1bnRpdm8uJywKICB9LAogIHsKICAgIGlkOiAyLCBpY29uOiAn8J+SsCcsIGJhZGdlOiAnUHJlenpvJywgY29sb3I6ICdncmVlbicsCiAgICB0aXRvbG86ICdPZmZlcnRlIGNvbmNvcnJlbnppYWxpJywKICAgIGRlc2NyaXppb25lOiAnUHJlenppIGNvbXBldGl0aXZpIHN1IHR1dHRlIGxlIGZhc2NlOiBkYSA1LDk54oKsIGEgMjMsOTnigqwvbWVzZSBwZXIgaWwgbW9iaWxlLCBjb24gR0IgZWxldmF0aSBlIHNlbnphIGNvc3RpIG5hc2Nvc3RpLiBEaWZmaWNpbGUgdHJvdmFyZSBkaSBtZWdsaW8gc3VsbGUgc3Rlc3NlIGNvbmRpemlvbmkgZGkgcmV0ZSBUSU0uJywKICB9LAogIHsKICAgIGlkOiAzLCBpY29uOiAn8J+bgicsIGJhZGdlOiAnQWNjZXNzaWJpbGl0w6AnLCBjb2xvcjogJ3B1cnBsZScsCiAgICB0aXRvbG86ICdOdW92aSBudW1lcmkgYW5jaGUgc29sbyBjb24gcGFzc2Fwb3J0bycsCiAgICBkZXNjcml6aW9uZTogJ1BlciBsZSBudW92ZSBudW1lcmF6aW9uaSBub24gc2VydmUgbGEgY2FydGEgZFwnaWRlbnRpdMOgIGl0YWxpYW5hOiDDqCBzdWZmaWNpZW50ZSBpbCBwYXNzYXBvcnRvLiBBbXBsaWEgaWwgYmFjaW5vIGRpIGNsaWVudGVsYTogdHVyaXN0aSwgZXhwYXQgZSBzdHJhbmllcmkgcmVzaWRlbnRpIGluIEl0YWxpYS4nLAogIH0sCiAgewogICAgaWQ6IDQsIGljb246ICfimqEnLCBiYWRnZTogJ1NlbXBsaWNpdMOgIG9wZXJhdGl2YScsIGNvbG9yOiAneWVsbG93JywKICAgIHRpdG9sbzogJ1Rpc2NhbGkgU3RhdGlvbjogcG9jaGkgcGFzc2FnZ2ksIGF0dGl2YXppb25lIHNlbXBsaWNlJywKICAgIGRlc2NyaXppb25lOiAnVGlzY2FsaSBTdGF0aW9uIMOoIGludHVpdGl2YSBlIGhhIHBvY2hpIHBhc3NhZ2dpIHBlciBpbCByaXZlbmRpdG9yZS4gSW5zZXJpcmUgdW5hIHByYXRpY2Egw6ggcmFwaWRvLiBBdHRlbnppb25lOiBxdWVzdG8gbm9uIHNpIHJpZmVyaXNjZSBhaSB0ZW1waSB0ZWNuaWNpIGRpIGF0dGl2YXppb25lIGRlbCBzZXJ2aXppbyBhbCBjbGllbnRlIChjaGUgZGlwZW5kb25vIGRhaSBwcm9jZXNzaSBkaSBwb3J0YWJpbGl0w6AgZSBkaSByZXRlKSwgbWEgYWxsYSBzZW1wbGljaXTDoCBkXCd1c28gZGVsbGEgcGlhdHRhZm9ybWEuJywKICB9LAogIHsKICAgIGlkOiA1LCBpY29uOiAn8J+ThScsIGJhZGdlOiAnUG9ydGFiaWxpdMOgIHNtYXJ0JywgY29sb3I6ICd0aXNjYWxpJywgaGlnaGxpZ2h0OiB0cnVlLAogICAgdGl0b2xvOiAnU2NlZ2xpIGlsIGdpb3JubyBkZWwgcGFzc2FnZ2lvIGRlbCBudW1lcm8nLAogICAgZGVzY3JpemlvbmU6ICdJbCBjbGllbnRlIHNjZWdsaWUgaWwgZ2lvcm5vIGVzYXR0byBkZWxsYSBwb3J0YWJpbGl0w6Ag4oCUIHF1ZWxsbyBpbiBjdWkgc2NhZGUgbGEgc3VhIG9mZmVydGEgY29uIGlsIHZlY2NoaW8gb3BlcmF0b3JlLiBWZW5kaSBsYSBTSU0gb2dnaSBjb24gbGEgZGF0YSBnacOgIGltcG9zdGF0YSBjb3JyZXR0YW1lbnRlLiBOb24gZGV2aSBmYXIgdG9ybmFyZSBpbCBjbGllbnRlLiBaZXJvIHNwcmVjbywgemVybyBzdHJlc3MuJywKICB9LAogIHsKICAgIGlkOiA2LCBpY29uOiAn8J+UkycsIGJhZGdlOiAnTGliZXJ0w6AnLCBjb2xvcjogJ2dyZWVuJywKICAgIHRpdG9sbzogJ05lc3N1biB2aW5jb2xvIGNvbnRyYXR0dWFsZScsCiAgICBkZXNjcml6aW9uZTogJ0lsIG1vYmlsZSBub24gaGEgdmluY29saSBkaSBwZXJtYW5lbnphLiBEYSBjb211bmljYXJlIGNvbiB0cmFzcGFyZW56YTogc29ubyBuZWNlc3NhcmkgMTIwIGdpb3JuaSBwcmltYSBkaSBwb3RlciBmYXJlIE1OUCBvdXQgdmVyc28gdW4gYWx0cm8gb3BlcmF0b3JlLicsCiAgfSwKICB7CiAgICBpZDogNywgaWNvbjogJ/Cfk7EnLCBiYWRnZTogJ0RyaXZlIHRvIHN0b3JlJywgY29sb3I6ICdvcmFuZ2UnLCBoaWdobGlnaHQ6IHRydWUsCiAgICB0aXRvbG86ICdBUE4gZSBjb25maWd1cmF6aW9uZSDigJQgZHJpdmUgdG8gc3RvcmUgcG9zdC1hdHRpdmF6aW9uZScsCiAgICBkZXNjcml6aW9uZTogJ0dsaSBBUE4gc2kgcG9zc29ubyBpbnNlcmlyZSBTT0xPIGEgU0lNIGdpw6AgYXR0aXZhLCBub24gYWwgbW9tZW50byBkZWxsYSB2ZW5kaXRhLiBQZXIgcXVlc3RvIG1vdGl2byBpbnZpdGEgaWwgY2xpZW50ZSBhIHRvcm5hcmUgaW4gbmVnb3ppbyBxdWFuZG8gaWwgbnVtZXJvIMOoIGF0dGl2bywgcGVyIGNvbmZpZ3VyYXJlIGluc2llbWUgQVBOLCBlbWFpbCBlIGltcG9zdGF6aW9uaS4gw4ggdW5cJ290dGltYSBvY2Nhc2lvbmUgcGVyIGNvc3RydWlyZSBpbCByYXBwb3J0byBlIHBhcmxhcmUgZGkgYWx0cmkgcHJvZG90dGk6IGx1Y2UgZSBnYXM/IEZpc3NvPyBUVj8nLAogIH0sCiAgewogICAgaWQ6IDgsIGljb246ICfwn46rJywgYmFkZ2U6ICdBc3Npc3RlbnphJywgY29sb3I6ICdibHVlJywKICAgIHRpdG9sbzogJ0ZyZXNoZGVzayDigJQgc2VnbmFsYXppb25pIHNlbnphIGNvZGUnLAogICAgZGVzY3JpemlvbmU6ICdQZXIgb2duaSBwcm9ibGVtYXRpY2EgY2xpZW50ZSBlc2lzdGUgdW5hIHNvbHV6aW9uZSBzZSBiZW4gaW5zdHJhZGF0YSB0cmFtaXRlIEZyZXNoZGVzay4gSWwgc2lzdGVtYSBldml0YSBsZSBjb2RlIGFsIHRlbGVmb25vIGUgcGVybWV0dGUgZGkgZ2VzdGlyZSBsZSBwcm9ibGVtYXRpY2hlIGNvbiB0cmFucXVpbGxpdMOgLCB0cmFjY2lhbmRvIG9nbmkgdGlja2V0IGNvbiBzdG9yaWNvIGRvY3VtZW50YXRvLicsCiAgfSwKXTsKCmNvbnN0IENPTE9SX01BUCA9IHsKICBibHVlOiAgICB7IGJvcmRlcjogJ2JvcmRlci1ibHVlLTEwMCcsICAgIGljb246ICdiZy1ibHVlLTEwMCB0ZXh0LWJsdWUtNzAwJywgICAgIGJhZGdlOiAnYmctYmx1ZS01MCB0ZXh0LWJsdWUtNjAwJyB9LAogIGdyZWVuOiAgIHsgYm9yZGVyOiAnYm9yZGVyLWdyZWVuLTEwMCcsICAgaWNvbjogJ2JnLWdyZWVuLTEwMCB0ZXh0LWdyZWVuLTcwMCcsICAgYmFkZ2U6ICdiZy1ncmVlbi01MCB0ZXh0LWdyZWVuLTYwMCcgfSwKICBwdXJwbGU6ICB7IGJvcmRlcjogJ2JvcmRlci1wdXJwbGUtMTAwJywgIGljb246ICdiZy1wdXJwbGUtMTAwIHRleHQtcHVycGxlLTcwMCcsIGJhZGdlOiAnYmctcHVycGxlLTUwIHRleHQtcHVycGxlLTYwMCcgfSwKICB5ZWxsb3c6ICB7IGJvcmRlcjogJ2JvcmRlci15ZWxsb3ctMTAwJywgIGljb246ICdiZy15ZWxsb3ctMTAwIHRleHQteWVsbG93LTcwMCcsIGJhZGdlOiAnYmcteWVsbG93LTUwIHRleHQteWVsbG93LTYwMCcgfSwKICBvcmFuZ2U6ICB7IGJvcmRlcjogJ2JvcmRlci1vcmFuZ2UtMTAwJywgIGljb246ICdiZy1vcmFuZ2UtMTAwIHRleHQtb3JhbmdlLTcwMCcsIGJhZGdlOiAnYmctb3JhbmdlLTUwIHRleHQtb3JhbmdlLTYwMCcgfSwKICB0aXNjYWxpOiB7IGJvcmRlcjogJ2JvcmRlci10aXNjYWxpLTIwMCcsIGljb246ICdiZy10aXNjYWxpLTYwMCB0ZXh0LXdoaXRlJywgICAgICBiYWRnZTogJ2JnLXRpc2NhbGktNTAgdGV4dC10aXNjYWxpLTYwMCcgfSwKfTsKCmZ1bmN0aW9uIFZhbnRhZ2dpb0NhcmQoeyB2LCBpZHggfSkgewogIGNvbnN0IGMgPSBDT0xPUl9NQVBbdi5jb2xvcl0gfHwgQ09MT1JfTUFQLmJsdWU7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPXtgcmVsYXRpdmUgcm91bmRlZC14bCBib3JkZXIgcC01IGJnLXdoaXRlIHRyYW5zaXRpb24tYWxsIGhvdmVyOnNoYWRvdy1tZCAke3YuaGlnaGxpZ2h0ID8gYy5ib3JkZXIgKyAnIHNoYWRvdy1zbScgOiAnYm9yZGVyLWdyYXktMTAwJ31gfT4KICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTQiPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBnYXAtMS41IGZsZXgtc2hyaW5rLTAgcHQtMC41Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgdy0xMCBoLTEwIHJvdW5kZWQteGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC14bCAke2MuaWNvbn1gfT57di5pY29ufTwvZGl2PgogICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktMzAwIj4je2lkeCArIDF9PC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4LTEgbWluLXctMCI+CiAgICAgICAgICB7LyogQmFkZ2UgaW4gcmlnYSBzZXBhcmF0YSBzb3ByYSBpbCB0aXRvbG8g4oCUIG5vbiBzb3ZyYXBwb3N0byAqL30KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT17YGlubGluZS1ibG9jayB0ZXh0LVsxMHB4XSBmb250LWJvbGQgcHgtMiBweS0wLjUgcm91bmRlZCBtYi0xLjUgJHtjLmJhZGdlfWB9PgogICAgICAgICAgICB7di5iYWRnZX17di5oaWdobGlnaHQgPyAnIOKtkCcgOiAnJ30KICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgIDxoMyBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LWdyYXktOTAwIHRleHQtc20gbGVhZGluZy1zbnVnIG1iLTEuNSI+e3YudGl0b2xvfTwvaDM+CiAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1ncmF5LTYwMCBsZWFkaW5nLXJlbGF4ZWQiPnt2LmRlc2NyaXppb25lfTwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBQZXJjaGVUaXNjYWxpKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0idy1mdWxsIG92ZXJmbG93LXgtaGlkZGVuIj4KICAgICAgPGRpdiBjbGFzc05hbWU9Im1iLTYiPgogICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtY29uZGVuc2VkIHRleHQtM3hsIGZvbnQtYm9sZCB0ZXh0LWdyYXktOTAwIG1iLTEiPlBlcmNow6kgdmVuZGVyZSBUaXNjYWxpPC9oMj4KICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1ncmF5LTUwMCI+QXJnb21lbnRpIGNoaWF2ZSBwZXIgbCdBcmVhIE1hbmFnZXIgwrcgQXByaWxlIDIwMjY8L3A+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzc05hbWU9ImJnLXRpc2NhbGktNzAwIHRleHQtd2hpdGUgcm91bmRlZC0yeGwgcC01IG1iLTYiPgogICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSBsZWFkaW5nLXJlbGF4ZWQgb3BhY2l0eS05MCI+CiAgICAgICAgICBUaXNjYWxpIE1vYmlsZSDDqCB1biBNVk5PIGNoZSBvcGVyYSBzdWxsYSByZXRlIFRJTSDigJQgbGEgbWlnbGlvcmUgcmV0ZSBtb2JpbGUgaXRhbGlhbmEuCiAgICAgICAgICBPZmZyZSBwcmV6emkgY29tcGV0aXRpdmksIGF0dGl2YXppb25lIHNlbXBsaWNlIGUgc3RydW1lbnRpIHBlbnNhdGkgcGVyIGNoaSB2ZW5kZS4KICAgICAgICA8L3A+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTQgbWItNiI+CiAgICAgICAge1ZBTlRBR0dJLm1hcCgodiwgaSkgPT4gPFZhbnRhZ2dpb0NhcmQga2V5PXt2LmlkfSB2PXt2fSBpZHg9e2l9IC8+KX0KICAgICAgPC9kaXY+CgogICAgICB7LyogQVBOIEJveCAqL30KICAgICAgPGRpdiBjbGFzc05hbWU9ImJnLWFtYmVyLTUwIGJvcmRlciBib3JkZXItYW1iZXItMjAwIHJvdW5kZWQteGwgcC01IG1iLTQiPgogICAgICAgIDxoMyBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LWFtYmVyLTkwMCBtYi0zIGZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHRleHQtc20iPgogICAgICAgICAg8J+TsSBDb25maWd1cmF6aW9uZSBBUE4gVGlzY2FsaSBNb2JpbGUKICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vYXNzaXN0ZW56YS50aXNjYWxpLml0L21vYmlsZS9ndWlkYS9wYXJhbWV0cmkvIgogICAgICAgICAgICB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub3JlZmVycmVyIgogICAgICAgICAgICBjbGFzc05hbWU9InRleHQteHMgZm9udC1ub3JtYWwgdGV4dC10aXNjYWxpLTYwMCB1bmRlcmxpbmUgaG92ZXI6dGV4dC10aXNjYWxpLTgwMCBtbC0xIj4KICAgICAgICAgICAgR3VpZGEgdWZmaWNpYWxlIFRpc2NhbGkg4oaSCiAgICAgICAgICA8L2E+CiAgICAgICAgPC9oMz4KCiAgICAgICAgey8qIFBhcmFtZXRyaSBBUE4gKi99CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImJnLXdoaXRlIHJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1hbWJlci0yMDAgcC0zIG1iLTQgZm9udC1tb25vIHRleHQteHMiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTIgZ2FwLXgtNCBnYXAteS0xIHRleHQtYW1iZXItOTAwIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWFtYmVyLTUwMCBmb250LXNhbnMgZm9udC1zZW1pYm9sZCI+Tm9tZTwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LWJvbGQiPlRJU0NBTEkgSU5URVJORVQ8L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1hbWJlci01MDAgZm9udC1zYW5zIGZvbnQtc2VtaWJvbGQiPkFQTjwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LWJvbGQgdGV4dC10aXNjYWxpLTcwMCI+dGlzY2FsaW1vYmlsZWludGVybmV0PC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtYW1iZXItNTAwIGZvbnQtc2FucyBmb250LXNlbWlib2xkIj5UaXBvIEFQTjwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4+ZGVmYXVsdDwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWFtYmVyLTUwMCBmb250LXNhbnMgZm9udC1zZW1pYm9sZCI+VXNlcm5hbWU8L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1ncmF5LTQwMCI+KHZ1b3RvKTwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LWFtYmVyLTUwMCBmb250LXNhbnMgZm9udC1zZW1pYm9sZCI+UGFzc3dvcmQ8L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1ncmF5LTQwMCI+KHZ1b3RvKTwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImJvcmRlci10IGJvcmRlci1hbWJlci0xMDAgbXQtMiBwdC0yIj4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LWFtYmVyLTYwMCBmb250LXNhbnMgdGV4dC1bMTBweF0iPlBlciBob3RzcG90L3RldGhlcmluZzogQVBOIDxzdHJvbmc+dGlzY2FsaW1vYmlsZXRldGhlcmluZzwvc3Ryb25nPiDCtyB0aXBvIERVTjwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMSBzbTpncmlkLWNvbHMtMiBnYXAtMyB0ZXh0LXNtIHRleHQtYW1iZXItODAwIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy13aGl0ZSByb3VuZGVkLWxnIGJvcmRlciBib3JkZXItYW1iZXItMTAwIHAtMyI+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0iZm9udC1ib2xkIG1iLTEuNSI+8J+TsSBpUGhvbmUgLyBpUGFkPC9wPgogICAgICAgICAgICA8b2wgY2xhc3NOYW1lPSJ0ZXh0LXhzIHNwYWNlLXktMC41IHRleHQtYW1iZXItNzAwIGxpc3QtZGVjaW1hbCBsaXN0LWluc2lkZSI+CiAgICAgICAgICAgICAgPGxpPkltcG9zdGF6aW9uaSDihpIgQ2VsbHVsYXJlPC9saT4KICAgICAgICAgICAgICA8bGk+UmV0ZSBkYXRpIGNlbGx1bGFyZTwvbGk+CiAgICAgICAgICAgICAgPGxpPkFQTjogPHN0cm9uZyBjbGFzc05hbWU9InRleHQtdGlzY2FsaS03MDAiPnRpc2NhbGltb2JpbGVpbnRlcm5ldDwvc3Ryb25nPjwvbGk+CiAgICAgICAgICAgICAgPGxpPlVzZXJuYW1lIGUgUGFzc3dvcmQ6IHZ1b3RpPC9saT4KICAgICAgICAgICAgPC9vbD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImJnLXdoaXRlIHJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1hbWJlci0xMDAgcC0zIj4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJmb250LWJvbGQgbWItMS41Ij7wn6SWIEFuZHJvaWQ8L3A+CiAgICAgICAgICAgIDxvbCBjbGFzc05hbWU9InRleHQteHMgc3BhY2UteS0wLjUgdGV4dC1hbWJlci03MDAgbGlzdC1kZWNpbWFsIGxpc3QtaW5zaWRlIj4KICAgICAgICAgICAgICA8bGk+SW1wb3N0YXppb25pIOKGkiBSZXRpIG1vYmlsaTwvbGk+CiAgICAgICAgICAgICAgPGxpPk5vbWkgcHVudGkgZGkgYWNjZXNzbyDihpIgKyBOdW92bzwvbGk+CiAgICAgICAgICAgICAgPGxpPk5vbWU6IFRJU0NBTEkgSU5URVJORVQ8L2xpPgogICAgICAgICAgICAgIDxsaT5BUE46IDxzdHJvbmcgY2xhc3NOYW1lPSJ0ZXh0LXRpc2NhbGktNzAwIj50aXNjYWxpbW9iaWxlaW50ZXJuZXQ8L3N0cm9uZz48L2xpPgogICAgICAgICAgICAgIDxsaT5TYWx2YSBlIHNlbGV6aW9uYSBpbCBwcm9maWxvPC9saT4KICAgICAgICAgICAgPC9vbD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LWFtYmVyLTYwMCBtdC0zIj4KICAgICAgICAgIPCfkqEgSW4gYWx0ZXJuYXRpdmEgY2hpYW1hIGlsIDxzdHJvbmc+MTMwPC9zdHJvbmc+IGRhIFNJTSBUaXNjYWxpIHBlciByaWNldmVyZSBTTVMgZGkgY29uZmlndXJhemlvbmUgYXV0b21hdGljYS4KICAgICAgICA8L3A+CiAgICAgIDwvZGl2PgoKICAgICAgey8qIFN0cnVtZW50aSBvcGVyYXRpdmkgKi99CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJiZy1ibHVlLTUwIGJvcmRlciBib3JkZXItYmx1ZS0yMDAgcm91bmRlZC14bCBwLTUgbWItNCI+CiAgICAgICAgPGgzIGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtYmx1ZS05MDAgbWItMyB0ZXh0LXNtIj7wn5ug77iPIFN0cnVtZW50aSBvcGVyYXRpdmk8L2gzPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0xIHNtOmdyaWQtY29scy0yIGdhcC0zIj4KICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vdGlzY2FsaS5mcmVzaGRlc2suY29tL3N1cHBvcnQvbG9naW4iCiAgICAgICAgICAgIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vcmVmZXJyZXIiCiAgICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ibHVlLTIwMCByb3VuZGVkLWxnIHB4LTQgcHktMyBob3Zlcjpib3JkZXItYmx1ZS00MDAgaG92ZXI6c2hhZG93LXNtIHRyYW5zaXRpb24tYWxsIGdyb3VwIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LTJ4bCI+8J+Oqzwvc3Bhbj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgtMSBtaW4tdy0wIj4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LXNtIHRleHQtZ3JheS05MDAgZ3JvdXAtaG92ZXI6dGV4dC1ibHVlLTcwMCI+RnJlc2hkZXNrPC9wPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LWdyYXktNTAwIj5BcHJpIGUgZ2VzdGlzY2kgdGlja2V0IGFzc2lzdGVuemE8L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8c3ZnIGNsYXNzTmFtZT0idy00IGgtNCB0ZXh0LWdyYXktMzAwIGdyb3VwLWhvdmVyOnRleHQtYmx1ZS01MDAgZmxleC1zaHJpbmstMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlTGluZWNhcD0icm91bmQiIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlV2lkdGg9ezJ9IGQ9Ik0xMCA2SDZhMiAyIDAgMDAtMiAydjEwYTIgMiAwIDAwMiAyaDEwYTIgMiAwIDAwMi0ydi00TTE0IDRoNm0wIDB2Nm0wLTZMMTAgMTQiIC8+CiAgICAgICAgICAgIDwvc3ZnPgogICAgICAgICAgPC9hPgogICAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9leHAtcGFydG5lcnMudGlzY2FsaS5pdC8iCiAgICAgICAgICAgIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vcmVmZXJyZXIiCiAgICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ibHVlLTIwMCByb3VuZGVkLWxnIHB4LTQgcHktMyBob3Zlcjpib3JkZXItdGlzY2FsaS00MDAgaG92ZXI6c2hhZG93LXNtIHRyYW5zaXRpb24tYWxsIGdyb3VwIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LTJ4bCI+8J+Pqjwvc3Bhbj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgtMSBtaW4tdy0wIj4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9ImZvbnQtYm9sZCB0ZXh0LXNtIHRleHQtZ3JheS05MDAgZ3JvdXAtaG92ZXI6dGV4dC10aXNjYWxpLTcwMCI+VGlzY2FsaSBTdGF0aW9uPC9wPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LWdyYXktNTAwIj5Qb3J0YWxlIHBhcnRuZXIgZSBhcmVhIHJpdmVuZGl0b3JpPC9wPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9InctNCBoLTQgdGV4dC1ncmF5LTMwMCBncm91cC1ob3Zlcjp0ZXh0LXRpc2NhbGktNTAwIGZsZXgtc2hyaW5rLTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgogICAgICAgICAgICAgIDxwYXRoIHN0cm9rZUxpbmVjYXA9InJvdW5kIiBzdHJva2VMaW5lam9pbj0icm91bmQiIHN0cm9rZVdpZHRoPXsyfSBkPSJNMTAgNkg2YTIgMiAwIDAwLTIgMnYxMGEyIDIgMCAwMDIgMmgxMGEyIDIgMCAwMDItMnYtNE0xNCA0aDZtMCAwdjZtMC02TDEwIDE0IiAvPgogICAgICAgICAgICA8L3N2Zz4KICAgICAgICAgIDwvYT4KICAgICAgICAgIDxhIGhyZWY9Ii9NYW51YWxlX0ZyZXNoZGVzay5wZGYiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vcmVmZXJyZXIiCiAgICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ibHVlLTIwMCByb3VuZGVkLWxnIHB4LTQgcHktMyBob3Zlcjpib3JkZXItYmx1ZS00MDAgaG92ZXI6c2hhZG93LXNtIHRyYW5zaXRpb24tYWxsIGdyb3VwIHNtOmNvbC1zcGFuLTIiPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtMnhsIj7wn5OEPC9zcGFuPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleC0xIG1pbi13LTAiPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0iZm9udC1ib2xkIHRleHQtc20gdGV4dC1ncmF5LTkwMCBncm91cC1ob3Zlcjp0ZXh0LWJsdWUtNzAwIj5NYW51YWxlIEZyZXNoZGVzazwvcD4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1ncmF5LTUwMCI+TGVnZ2kgbGEgZ3VpZGEgY29tcGxldGEg4oCUIGFwZXJ0dXJhIHRpY2tldCwgdGlwb2xvZ2llLCBzdGF0aSBlIGFzc2lzdGVuemEgdGVsZWZvbmljYTwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxzdmcgY2xhc3NOYW1lPSJ3LTQgaC00IHRleHQtZ3JheS0zMDAgZ3JvdXAtaG92ZXI6dGV4dC1ibHVlLTUwMCBmbGV4LXNocmluay0wIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgICAgICAgICAgICA8cGF0aCBzdHJva2VMaW5lY2FwPSJyb3VuZCIgc3Ryb2tlTGluZWpvaW49InJvdW5kIiBzdHJva2VXaWR0aD17Mn0gZD0iTTEwIDZINmEyIDIgMCAwMC0yIDJ2MTBhMiAyIDAgMDAyIDJoMTBhMiAyIDAgMDAyLTJ2LTRNMTQgNGg2bTAgMHY2bTAtNkwxMCAxNCIgLz4KICAgICAgICAgICAgPC9zdmc+CiAgICAgICAgICA8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtYmx1ZS03MDAgbXQtMyBsZWFkaW5nLXJlbGF4ZWQiPgogICAgICAgICAgUGVyIG9nbmkgcHJvYmxlbWF0aWNhIGNsaWVudGUgYXByaSB1biB0aWNrZXQgc3UgRnJlc2hkZXNrIGRlc2NyaXZlbmRvIGNoaWFyYW1lbnRlIGlsIHByb2JsZW1hIGUgaWwgbnVtZXJvIGNvaW52b2x0by4KICAgICAgICAgIFVuYSBzZWduYWxhemlvbmUgYmVuIGluc3RyYWRhdGEgb3R0aWVuZSByaXNwb3N0YSByYXBpZGEgc2VuemEgZG92ZXIgY2hpYW1hcmUgaWwgY2VudHJhbGluby4KICAgICAgICA8L3A+CiAgICAgIDwvZGl2PgoKICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtZ3JheS00MDAgdGV4dC1jZW50ZXIiPgogICAgICAgIFRpc2NhbGkgRTJLIEFyZWEgTWFuYWdlciBUb29sIMK3IEFwcmlsZSAyMDI2CiAgICAgIDwvcD4KICAgIDwvZGl2PgogICk7Cn0K"}
+const VANTAGGI = [
+  {
+    id: 1, icon: '📶', badge: 'Qualità rete', color: 'blue',
+    titolo: 'Rete TIM non cappata + 5G incluso',
+    descrizione: 'Tiscali Mobile naviga sulla rete TIM, la migliore rete mobile italiana. Non cappata: il cliente ha le stesse velocità 5G degli altri operatori TIM, senza throttling. Il 5G è incluso in tutte le offerte senza costo aggiuntivo.',
+  },
+  {
+    id: 2, icon: '💰', badge: 'Prezzo', color: 'green',
+    titolo: 'Offerte concorrenziali',
+    descrizione: 'Prezzi competitivi su tutte le fasce: da 5,99€ a 23,99€/mese per il mobile, con GB elevati e senza costi nascosti. Difficile trovare di meglio sulle stesse condizioni di rete TIM.',
+  },
+  {
+    id: 3, icon: '🛂', badge: 'Accessibilità', color: 'purple',
+    titolo: 'Nuovi numeri anche solo con passaporto',
+    descrizione: 'Per le nuove numerazioni non serve la carta d\'identità italiana: è sufficiente il passaporto. Amplia il bacino di clientela: turisti, expat e stranieri residenti in Italia.',
+  },
+  {
+    id: 4, icon: '⚡', badge: 'Semplicità operativa', color: 'yellow',
+    titolo: 'Tiscali Station: pochi passaggi, attivazione semplice',
+    descrizione: 'Tiscali Station è intuitiva e ha pochi passaggi per il rivenditore. Inserire una pratica è rapido. Attenzione: questo non si riferisce ai tempi tecnici di attivazione del servizio al cliente (che dipendono dai processi di portabilità e di rete), ma alla semplicità d\'uso della piattaforma.',
+  },
+  {
+    id: 5, icon: '📅', badge: 'Portabilità smart', color: 'tiscali', highlight: true,
+    titolo: 'Scegli il giorno del passaggio del numero',
+    descrizione: 'Il cliente sceglie il giorno esatto della portabilità — quello in cui scade la sua offerta con il vecchio operatore. Vendi la SIM oggi con la data già impostata correttamente. Non devi far tornare il cliente. Zero spreco, zero stress.',
+  },
+  {
+    id: 6, icon: '🔓', badge: 'Libertà', color: 'green',
+    titolo: 'Nessun vincolo contrattuale',
+    descrizione: 'Il mobile non ha vincoli di permanenza. Da comunicare con trasparenza: sono necessari 120 giorni prima di poter fare MNP out verso un altro operatore.',
+  },
+  {
+    id: 7, icon: '📱', badge: 'Drive to store', color: 'orange', highlight: true,
+    titolo: 'APN e configurazione — drive to store post-attivazione',
+    descrizione: 'Gli APN si possono inserire SOLO a SIM già attiva, non al momento della vendita. Per questo motivo invita il cliente a tornare in negozio quando il numero è attivo, per configurare insieme APN, email e impostazioni. È un\'ottima occasione per costruire il rapporto e parlare di altri prodotti: luce e gas? Fisso? TV?',
+  },
+  {
+    id: 8, icon: '🎫', badge: 'Assistenza', color: 'blue',
+    titolo: 'Freshdesk — segnalazioni senza code',
+    descrizione: 'Per ogni problematica cliente esiste una soluzione se ben instradata tramite Freshdesk. Il sistema evita le code al telefono e permette di gestire le problematiche con tranquillità, tracciando ogni ticket con storico documentato.',
+  },
+];
+
+const COLOR_MAP = {
+  blue:    { border: 'border-blue-100',    icon: 'bg-blue-100 text-blue-700',     badge: 'bg-blue-50 text-blue-600' },
+  green:   { border: 'border-green-100',   icon: 'bg-green-100 text-green-700',   badge: 'bg-green-50 text-green-600' },
+  purple:  { border: 'border-purple-100',  icon: 'bg-purple-100 text-purple-700', badge: 'bg-purple-50 text-purple-600' },
+  yellow:  { border: 'border-yellow-100',  icon: 'bg-yellow-100 text-yellow-700', badge: 'bg-yellow-50 text-yellow-600' },
+  orange:  { border: 'border-orange-100',  icon: 'bg-orange-100 text-orange-700', badge: 'bg-orange-50 text-orange-600' },
+  tiscali: { border: 'border-tiscali-200', icon: 'bg-tiscali-600 text-white',      badge: 'bg-tiscali-50 text-tiscali-600' },
+};
+
+function VantaggioCard({ v, idx }) {
+  const c = COLOR_MAP[v.color] || COLOR_MAP.blue;
+  return (
+    <div className={`relative rounded-xl border p-5 bg-white transition-all hover:shadow-md ${v.highlight ? c.border + ' shadow-sm' : 'border-gray-100'}`}>
+      <div className="flex items-start gap-4">
+        <div className="flex flex-col items-center gap-1.5 flex-shrink-0 pt-0.5">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl ${c.icon}`}>{v.icon}</div>
+          <span className="text-xs font-bold text-gray-300">#{idx + 1}</span>
+        </div>
+        <div className="flex-1 min-w-0">
+          {/* Badge in riga separata sopra il titolo — non sovrapposto */}
+          <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded mb-1.5 ${c.badge}`}>
+            {v.badge}{v.highlight ? ' ⭐' : ''}
+          </span>
+          <h3 className="font-bold text-gray-900 text-sm leading-snug mb-1.5">{v.titolo}</h3>
+          <p className="text-sm text-gray-600 leading-relaxed">{v.descrizione}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function PercheTiscali() {
+  return (
+    <div className="w-full overflow-x-hidden">
+      <div className="mb-6">
+        <h2 className="font-condensed text-3xl font-bold text-gray-900 mb-1">Perché vendere Tiscali</h2>
+        <p className="text-sm text-gray-500">Argomenti chiave per l'Area Manager · Aprile 2026</p>
+      </div>
+
+      <div className="bg-tiscali-700 text-white rounded-2xl p-5 mb-6">
+        <p className="text-sm leading-relaxed opacity-90">
+          Tiscali Mobile è un MVNO che opera sulla rete TIM — la migliore rete mobile italiana.
+          Offre prezzi competitivi, attivazione semplice e strumenti pensati per chi vende.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        {VANTAGGI.map((v, i) => <VantaggioCard key={v.id} v={v} idx={i} />)}
+      </div>
+
+      {/* APN Box */}
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-4">
+        <h3 className="font-bold text-amber-900 mb-3 flex items-center gap-2 text-sm">
+          📱 Configurazione APN Tiscali Mobile
+          <a href="https://assistenza.tiscali.it/mobile/guida/parametri/"
+            target="_blank" rel="noreferrer"
+            className="text-xs font-normal text-tiscali-600 underline hover:text-tiscali-800 ml-1">
+            Guida ufficiale Tiscali →
+          </a>
+        </h3>
+
+        {/* Parametri APN */}
+        <div className="bg-white rounded-lg border border-amber-200 p-3 mb-4 font-mono text-xs">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-amber-900">
+            <span className="text-amber-500 font-sans font-semibold">Nome</span>
+            <span className="font-bold">TISCALI INTERNET</span>
+            <span className="text-amber-500 font-sans font-semibold">APN</span>
+            <span className="font-bold text-tiscali-700">tiscalimobileinternet</span>
+            <span className="text-amber-500 font-sans font-semibold">Tipo APN</span>
+            <span>default</span>
+            <span className="text-amber-500 font-sans font-semibold">Username</span>
+            <span className="text-gray-400">(vuoto)</span>
+            <span className="text-amber-500 font-sans font-semibold">Password</span>
+            <span className="text-gray-400">(vuoto)</span>
+          </div>
+          <div className="border-t border-amber-100 mt-2 pt-2">
+            <p className="text-amber-600 font-sans text-[10px]">Per hotspot/tethering: APN <strong>tiscalimobiletethering</strong> · tipo DUN</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-amber-800">
+          <div className="bg-white rounded-lg border border-amber-100 p-3">
+            <p className="font-bold mb-1.5">📱 iPhone / iPad</p>
+            <ol className="text-xs space-y-0.5 text-amber-700 list-decimal list-inside">
+              <li>Impostazioni → Cellulare</li>
+              <li>Rete dati cellulare</li>
+              <li>APN: <strong className="text-tiscali-700">tiscalimobileinternet</strong></li>
+              <li>Username e Password: vuoti</li>
+            </ol>
+          </div>
+          <div className="bg-white rounded-lg border border-amber-100 p-3">
+            <p className="font-bold mb-1.5">🤖 Android</p>
+            <ol className="text-xs space-y-0.5 text-amber-700 list-decimal list-inside">
+              <li>Impostazioni → Reti mobili</li>
+              <li>Nomi punti di accesso → + Nuovo</li>
+              <li>Nome: TISCALI INTERNET</li>
+              <li>APN: <strong className="text-tiscali-700">tiscalimobileinternet</strong></li>
+              <li>Salva e seleziona il profilo</li>
+            </ol>
+          </div>
+        </div>
+        <p className="text-xs text-amber-600 mt-3">
+          💡 In alternativa chiama il <strong>130</strong> da SIM Tiscali per ricevere SMS di configurazione automatica.
+        </p>
+      </div>
+
+      {/* Strumenti operativi */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-4">
+        <h3 className="font-bold text-blue-900 mb-3 text-sm">🛠️ Strumenti operativi</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://tiscali.freshdesk.com/support/login"
+            target="_blank" rel="noreferrer"
+            className="flex items-center gap-3 bg-white border border-blue-200 rounded-lg px-4 py-3 hover:border-blue-400 hover:shadow-sm transition-all group">
+            <span className="text-2xl">🎫</span>
+            <div className="flex-1 min-w-0">
+              <p className="font-bold text-sm text-gray-900 group-hover:text-blue-700">Freshdesk</p>
+              <p className="text-xs text-gray-500">Apri e gestisci ticket assistenza</p>
+            </div>
+            <svg className="w-4 h-4 text-gray-300 group-hover:text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a href="https://exp-partners.tiscali.it/"
+            target="_blank" rel="noreferrer"
+            className="flex items-center gap-3 bg-white border border-blue-200 rounded-lg px-4 py-3 hover:border-tiscali-400 hover:shadow-sm transition-all group">
+            <span className="text-2xl">🏪</span>
+            <div className="flex-1 min-w-0">
+              <p className="font-bold text-sm text-gray-900 group-hover:text-tiscali-700">Tiscali Station</p>
+              <p className="text-xs text-gray-500">Portale partner e area rivenditori</p>
+            </div>
+            <svg className="w-4 h-4 text-gray-300 group-hover:text-tiscali-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a href="/Manuale_Freshdesk.pdf" target="_blank" rel="noreferrer"
+            className="flex items-center gap-3 bg-white border border-blue-200 rounded-lg px-4 py-3 hover:border-blue-400 hover:shadow-sm transition-all group sm:col-span-2">
+            <span className="text-2xl">📄</span>
+            <div className="flex-1 min-w-0">
+              <p className="font-bold text-sm text-gray-900 group-hover:text-blue-700">Manuale Freshdesk</p>
+              <p className="text-xs text-gray-500">Leggi la guida completa — apertura ticket, tipologie, stati e assistenza telefonica</p>
+            </div>
+            <svg className="w-4 h-4 text-gray-300 group-hover:text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+        <p className="text-xs text-blue-700 mt-3 leading-relaxed">
+          Per ogni problematica cliente apri un ticket su Freshdesk descrivendo chiaramente il problema e il numero coinvolto.
+          Una segnalazione ben instradata ottiene risposta rapida senza dover chiamare il centralino.
+        </p>
+      </div>
+
+      <p className="text-xs text-gray-400 text-center">
+        Tiscali E2K Area Manager Tool · Aprile 2026
+      </p>
+    </div>
+  );
+}

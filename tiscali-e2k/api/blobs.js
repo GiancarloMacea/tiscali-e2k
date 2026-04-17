@@ -1,1 +1,32 @@
-{"data":"Ly8gYXBpL2Jsb2JzLmpzIOKAlCBWZXJjZWwgU2VydmVybGVzcyBGdW5jdGlvbgovLyBQcm94eSBzZXJ2ZXItc2lkZSBwZXIgVmVyY2VsIEJsb2IgKGV2aXRhIENPUlMgZGFsIGJyb3dzZXIpCgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBoYW5kbGVyKHJlcSwgcmVzKSB7CiAgLy8gQ09SUyBoZWFkZXJzCiAgcmVzLnNldEhlYWRlcignQWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2luJywgJyonKTsKICByZXMuc2V0SGVhZGVyKCdBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzJywgJ0dFVCcpOwoKICBjb25zdCB0b2tlbiA9IHByb2Nlc3MuZW52LkJMT0JfUkVBRF9XUklURV9UT0tFTjsKICBpZiAoIXRva2VuKSB7CiAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLmpzb24oeyBlcnJvcjogJ0JMT0JfUkVBRF9XUklURV9UT0tFTiBub24gY29uZmlndXJhdG8nIH0pOwogIH0KCiAgdHJ5IHsKICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goJ2h0dHBzOi8vYmxvYi52ZXJjZWwtc3RvcmFnZS5jb20nLCB7CiAgICAgIGhlYWRlcnM6IHsgQXV0aG9yaXphdGlvbjogYEJlYXJlciAke3Rva2VufWAgfSwKICAgIH0pOwoKICAgIGlmICghcmVzcG9uc2Uub2spIHsKICAgICAgcmV0dXJuIHJlcy5zdGF0dXMocmVzcG9uc2Uuc3RhdHVzKS5qc29uKHsgZXJyb3I6ICdFcnJvcmUgQmxvYiBBUEknIH0pOwogICAgfQoKICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CgogICAgLy8gRXNjbHVkaSBpbmRleC5qc29uIGRhbCByaXN1bHRhdG8KICAgIGNvbnN0IGJsb2JzID0gKGRhdGEuYmxvYnMgfHwgW10pLmZpbHRlcihiID0+ICFiLnBhdGhuYW1lLnN0YXJ0c1dpdGgoJ2luZGV4JykpOwoKICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsgYmxvYnMgfSk7CiAgfSBjYXRjaCAoZXJyKSB7CiAgICByZXMuc3RhdHVzKDUwMCkuanNvbih7IGVycm9yOiBlcnIubWVzc2FnZSB9KTsKICB9Cn0K"}
+// api/blobs.js — Vercel Serverless Function
+// Proxy server-side per Vercel Blob (evita CORS dal browser)
+
+export default async function handler(req, res) {
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+
+  const token = process.env.BLOB_READ_WRITE_TOKEN;
+  if (!token) {
+    return res.status(500).json({ error: 'BLOB_READ_WRITE_TOKEN non configurato' });
+  }
+
+  try {
+    const response = await fetch('https://blob.vercel-storage.com', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (!response.ok) {
+      return res.status(response.status).json({ error: 'Errore Blob API' });
+    }
+
+    const data = await response.json();
+
+    // Escludi index.json dal risultato
+    const blobs = (data.blobs || []).filter(b => !b.pathname.startsWith('index'));
+
+    res.status(200).json({ blobs });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}

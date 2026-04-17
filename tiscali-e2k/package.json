@@ -1,1 +1,22 @@
-{"data":"ewogICJuYW1lIjogInRpc2NhbGktZTJrIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInZlcnNpb24iOiAiMS4wLjAiLAogICJ0eXBlIjogIm1vZHVsZSIsCiAgInNjcmlwdHMiOiB7CiAgICAiZGV2IjogInZpdGUiLAogICAgImJ1aWxkIjogInZpdGUgYnVpbGQiLAogICAgInByZXZpZXciOiAidml0ZSBwcmV2aWV3IgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJyZWFjdCI6ICJeMTguMi4wIiwKICAgICJyZWFjdC1kb20iOiAiXjE4LjIuMCIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHZpdGVqcy9wbHVnaW4tcmVhY3QiOiAiXjQuMi4xIiwKICAgICJ2aXRlIjogIl41LjEuMCIsCiAgICAidGFpbHdpbmRjc3MiOiAiXjMuNC4xIiwKICAgICJhdXRvcHJlZml4ZXIiOiAiXjEwLjQuMTciLAogICAgInBvc3Rjc3MiOiAiXjguNC4zNSIKICB9Cn0K"}
+{
+  "name": "tiscali-e2k",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35"
+  }
+}
