@@ -714,6 +714,14 @@ export const DATI = {
           ],
         },
         {
+          titolo: '⚠️ Non hai Freshdesk attivo?',
+          voci: [
+            'Scrivi a supportobp@tiscali.com per richiedere le credenziali di accesso.',
+            'Indica il tuo codice LK (es. LK00000).',
+            'Indica il tuo indirizzo email di riferimento.',
+          ],
+        },
+        {
           titolo: "Tipologie di ticket — scegli l'Area giusta",
           voci: [
             '🏢 AMMINISTRATIVA: chiarimenti fatture Fibra e Mobile.',
