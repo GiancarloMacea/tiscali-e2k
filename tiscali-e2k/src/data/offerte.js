@@ -867,5 +867,97 @@ export const DATI = {
         },
       ],
     },
+    {
+      id: 'srv-contatti',
+      nome: 'Contatti Supporto Business Partner',
+      icon: '📞',
+      sezioni: [
+        {
+          titolo: 'Numero dedicato Business Partner',
+          voci: [
+            'Numero: 0707574800',
+            'Disponibilità: Lunedì – Sabato · 8:30 – 19:00 (festivi esclusi)',
+            'Digita 1 → Assistenza tecnica',
+            'Digita 2 → Commerciale / Amministrativa',
+            'Digita 3 → Mobile',
+          ],
+        },
+        {
+          titolo: '⚠️ Importante',
+          voci: [
+            'Non usare contemporaneamente Freshdesk E il telefono per lo stesso caso: genera duplicazioni e rallentamenti.',
+            'Per contratti SOHO/B2B inserire la dicitura "B2B" nell\'oggetto del ticket per avere priorità.',
+          ],
+        },
+        {
+          titolo: 'Canali alternativi',
+          voci: [
+            'Freshdesk (ticketing): tiscali.freshdesk.com/support/login',
+            'Email Freshdesk non attivo: supportobp@tiscali.com (indicare codice LK e email di riferimento)',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'srv-sostituzione-sim',
+      nome: 'Procedura Cambio / Sostituzione SIM',
+      icon: '🔄',
+      sezioni: [
+        {
+          titolo: 'Come procedere — Tiscali Station',
+          voci: [
+            'Accedere al Portale Tiscali Station: exp-partners.tiscali.it',
+            'Selezionare: MOBILE',
+            'Selezionare: GESTIONE CLIENTE',
+            'Selezionare: CAMBIO SIM',
+            'Selezionare la causale del cambio SIM',
+          ],
+        },
+        {
+          titolo: 'Compilazione e autorizzazione',
+          voci: [
+            'Compilare in tutte le sue parti il form Cambio SIM.',
+            'Il tasto "PROCEDI" è inibito fino al ricevimento dell\'autorizzazione del cliente.',
+            'Il cliente accede a MyTiscali e fornisce il consenso — le SIM da usare sono le SIM MNP.',
+            'Ottenuta l\'autorizzazione il tasto "PROCEDI" viene abilitato: procedere con l\'ordine.',
+            'L\'ordine seguirà il normale processo di attivazione della nuova SIM.',
+          ],
+        },
+        {
+          titolo: 'Costo sostituzione',
+          voci: [
+            'L\'importo viene scalato direttamente dal credito residuo della SIM cliente.',
+          ],
+        },
+        {
+          titolo: 'Documenti necessari',
+          voci: [
+            'Copia fronte/retro del documento d\'identità in corso di validità.',
+            'Copia del Codice Fiscale.',
+            'Copia della vecchia SIM con ICCID visibile.',
+            'In caso di furto o smarrimento: denuncia rilasciata presso le Autorità competenti.',
+          ],
+        },
+        {
+          titolo: 'Attivazione nuova SIM',
+          voci: [
+            'Dopo aver ricevuto la nuova SIM, il cliente contatta il Servizio Clienti al 130 oppure tramite App MyTiscali per completare l\'attivazione.',
+          ],
+        },
+        {
+          titolo: 'Conferma sostituzione',
+          voci: [
+            'In homepage il cliente troverà l\'avviso "Sostituzione SIM [numero]".',
+            'Cliccare su CONFERMA → poi su VAI per confermare la sostituzione.',
+          ],
+        },
+        {
+          titolo: '📄 Documentazione',
+          voci: [
+            'La guida completa è disponibile nella sezione Materiali → Formazione.',
+          ],
+        },
+      ],
+    },
   ],
 };
