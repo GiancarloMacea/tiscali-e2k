@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const CATEGORIE = [
   { id: 'tutte',      label: 'Tutti',           icon: '📁' },
-  { id: 'brochure',  label: 'Brochure',          icon: '📑' },
+  { id: 'brochure',  label: 'Infoblocco',         icon: '📑' },
   { id: 'social',     label: 'Materiali Social',  icon: '📲' },
   { id: 'formazione', label: 'Formazione',        icon: '📚' },
   { id: 'freshdesk',  label: 'Freshdesk',         icon: '🎫' },
@@ -120,7 +120,7 @@ export default function Multimedia() {
     <div>
       <div className="mb-6">
         <h2 className="font-condensed text-3xl font-bold text-gray-900 mb-1">Multimedia & Marketing</h2>
-        <p className="text-sm text-gray-500">Schede prodotto, brochure e materiali formativi · Aprile 2026</p>
+        <p className="text-sm text-gray-500">Schede prodotto, infoblocco e materiali formativi · Aprile 2026</p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
