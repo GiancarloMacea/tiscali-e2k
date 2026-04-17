@@ -56,10 +56,20 @@ function FileCard({ file }) {
         </div>
       </div>
       <div className="flex gap-2">
-        <a href={file.url} target="_blank" rel="noreferrer"
-          className="flex-1 text-center text-xs font-semibold py-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-tiscali-50 hover:text-tiscali-700 transition-colors">
+        <button
+          onClick={async () => {
+            try {
+              const resp = await fetch(file.url);
+              const blob = await resp.blob();
+              const blobUrl = URL.createObjectURL(blob);
+              window.open(blobUrl, '_blank');
+            } catch {
+              window.open(file.url, '_blank');
+            }
+          }}
+          className="flex-1 text-center text-xs font-semibold py-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-tiscali-50 hover:text-tiscali-700 transition-colors cursor-pointer">
           👁 Apri
-        </a>
+        </button>
         <a href={file.url} download={nome}
           className="flex-1 text-center text-xs font-semibold py-2 rounded-lg bg-tiscali-600 text-white hover:bg-tiscali-700 transition-colors">
           ⬇ Scarica
