@@ -873,13 +873,36 @@ export const DATI = {
       icon: '📞',
       sezioni: [
         {
-          titolo: 'Numero dedicato Business Partner',
+          titolo: '📋 Guida Completa Contatti',
           voci: [
-            'Numero: 0707574800',
-            'Disponibilità: Lunedì – Sabato · 8:30 – 19:00 (festivi esclusi)',
-            'Digita 1 → Assistenza tecnica',
-            'Digita 2 → Commerciale / Amministrativa',
-            'Digita 3 → Mobile',
+            'Documento ufficiale Tiscali con tutti i numeri, tasti IVR e orari aggiornati. https://hrnrvsxfpvaibq54.public.blob.vercel-storage.com/contatti/Riepilogo_contatti_supporto_per_Business_Partner-JSzX8C19xK49riZGUWpJf0nRjsXWDI.pdf',
+          ],
+        },
+        {
+          titolo: '0805622001 — Numero Principale Business Partner',
+          voci: [
+            '🕐 Orari: Lunedì – Venerdì · 9:00 – 20:00 (chiuso sabato, domenica e festivi)',
+            'Tasto 1-1 → Assistenza tecnica per partner installatori (solo ODL APERTO — dopo chiamata del cliente al 130)',
+            'Tasto 1-2 → Assistenza/informazioni commerciali contratti B2B + Assistenza tecnica installatore con ODL aperto su 4G e 5G Opnet',
+            'Tasto 1-3 → Assistenza per ODL swap',
+            'Tasto 2   → Assistenza amministrativa e commerciale per clienti FWA',
+            'Tasto 3-1 → Assistenza/informazioni commerciali contratti Microbusiness',
+            'Tasto 3-2 → Assistenza commerciale Mobile · ordini SIM · plafond',
+            'Tasto 3-3 → Assistenza prodotto Cybersecurity: informazioni, contatti segnalati, stato contratti',
+            'Tasto 3-4 → Assistenza e informazioni commerciali contratti B2C',
+            'Tasto 3-5 → Assistenza fatture e inviti a fatturare del punto vendita',
+            'Tasto 3-6 → Ordini CPE e Scratch card FWA · Assistenza portale magazzino · Inventari apparati',
+            'Tasto 4   → Service Delivery FWA',
+          ],
+        },
+        {
+          titolo: '0707574800 — Numero per Clienti B2C e B2B in Punto Vendita',
+          voci: [
+            '🕐 Orari: Lunedì – Sabato · 8:30 – 19:00 (chiuso festivi)',
+            '⚠️ Esclusivamente per clienti B2C e B2B fisicamente presenti nel punto vendita',
+            'Tasto 1 → Assistenza tecnica',
+            'Tasto 2 → Assistenza commerciale / amministrativa',
+            'Tasto 3 → Assistenza prodotto Mobile',
           ],
         },
         {
@@ -887,6 +910,7 @@ export const DATI = {
           voci: [
             'Non usare contemporaneamente Freshdesk E il telefono per lo stesso caso: genera duplicazioni e rallentamenti.',
             'Per contratti SOHO/B2B inserire la dicitura "B2B" nell\'oggetto del ticket per avere priorità.',
+            'Il tasto 1-1 del 0805622001 è attivabile SOLO se esiste già un ODL aperto dopo che il cliente ha chiamato il 130 — non usarlo per aprire nuove segnalazioni.',
           ],
         },
         {

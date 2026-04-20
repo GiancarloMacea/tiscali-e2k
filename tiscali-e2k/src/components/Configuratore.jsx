@@ -258,18 +258,28 @@ function ServizioDettaglio({ srv, onBack }) {
             </div>
             <ul className="divide-y divide-gray-50">
               {sez.voci.map((v, j) => {
-                // Se la voce contiene un path PDF, rendila cliccabile
-                const pdfMatch = v.match(/\/[\w_-]+\.pdf/);
+                // Gestisce sia URL HTTPS completi (blob Vercel) sia path locali
+                const pdfMatch = v.match(/(https?:\/\/\S+\.pdf|\/[\w/_-]+\.pdf)/);
+                const openPdf = pdfMatch ? async () => {
+                  try {
+                    const resp = await fetch(pdfMatch[0]);
+                    const blob = await resp.blob();
+                    const blobUrl = URL.createObjectURL(blob);
+                    window.open(blobUrl, '_blank');
+                  } catch {
+                    window.open(pdfMatch[0], '_blank');
+                  }
+                } : null;
                 return (
                   <li key={j} className="flex items-start gap-3 px-4 py-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-tiscali-500 flex-shrink-0 mt-2" />
                     {pdfMatch ? (
                       <span className="text-sm text-gray-700 leading-relaxed">
-                        {v.replace(pdfMatch[0], '')}
-                        <a href={pdfMatch[0]} target="_blank" rel="noreferrer"
-                          className="inline-flex items-center gap-1 ml-1 font-bold text-tiscali-600 underline hover:text-tiscali-800">
-                          📄 Scarica PDF
-                        </a>
+                        {v.replace(pdfMatch[0], '').trim()}
+                        <button onClick={openPdf}
+                          className="inline-flex items-center gap-1 ml-2 font-bold text-tiscali-600 underline hover:text-tiscali-800 text-sm">
+                          📄 Apri PDF
+                        </button>
                       </span>
                     ) : (
                       <span className="text-sm text-gray-700 leading-relaxed">{v}</span>

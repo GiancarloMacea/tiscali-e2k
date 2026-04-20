@@ -215,7 +215,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
 }
 
 // ── Sezione con intestazione ──────────────────────────────────────────────────
-function Sezione({ titolo, icon, offerte, aperta, onToggle, cerca, logoLinkem, logoTiscali }) {
+function Sezione({ titolo, icon, offerte, aperta, onToggle, cerca, logoLinkem, logoTiscali, evidenziata }) {
   const visibili = offerte.filter(o =>
     !cerca || o.nome.toLowerCase().includes(cerca.toLowerCase()) ||
     (o.sub || '').toLowerCase().includes(cerca.toLowerCase()) ||
@@ -225,16 +225,27 @@ function Sezione({ titolo, icon, offerte, aperta, onToggle, cerca, logoLinkem, l
   if (visibili.length === 0) return null;
 
   return (
-    <div className="mb-6">
+    <div className={`mb-6 ${evidenziata ? 'rounded-2xl ring-2 ring-tiscali-500 shadow-lg overflow-hidden' : ''}`}>
+      {/* Banner convergenza evidenziata */}
+      {evidenziata && (
+        <div style={{ background: 'linear-gradient(90deg, #7c3aed 0%, #4f46e5 50%, #0ea5e9 100%)' }}
+          className="px-4 py-2.5 flex items-center gap-2">
+          <span className="text-base">⭐</span>
+          <span className="text-white font-bold text-sm tracking-wide">OFFERTA BUNDLE CONSIGLIATA — Risparmio garantito</span>
+          <span className="ml-auto bg-white bg-opacity-20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+            FISSO + MOBILE
+          </span>
+        </div>
+      )}
       {/* Header sezione */}
-      <div className="flex items-center gap-3 mb-3 pb-2 border-b-2 border-tiscali-600">
+      <div className={`flex items-center gap-3 mb-3 pb-2 border-b-2 ${evidenziata ? 'border-tiscali-500 px-3 pt-3' : 'border-tiscali-600'}`}>
         {!logoLinkem && !logoTiscali && <span className="text-lg">{icon}</span>}
         {logoTiscali ? (
           <img src="/loghi/logo-tiscali.png" alt="Tiscali" className="h-7 object-contain" />
         ) : logoLinkem ? (
           <img src="/loghi/logo-linkem.png" alt="Linkem" className="h-6 object-contain" />
         ) : (
-          <h3 className="font-condensed text-xl font-bold text-gray-800 tracking-tight">{titolo}</h3>
+          <h3 className={`font-condensed text-xl font-bold tracking-tight ${evidenziata ? 'text-tiscali-700' : 'text-gray-800'}`}>{titolo}</h3>
         )}
         <div className="flex-1 h-px bg-gray-200" />
         <span className="text-xs text-gray-400 font-medium">{visibili.length} {visibili.length === 1 ? 'offerta' : 'offerte'}</span>
@@ -282,6 +293,7 @@ export default function Listino() {
   const fissoRes = DATI.residenziale.fisso.filter(o => !o.id || !o.id.startsWith('res-fwa'));
 
   const sezioniRes = [
+    { titolo: 'Fisso + Mobile — Bundle Convergente', icon: '🔗', offerte: DATI.residenziale.convergente, evidenziata: true },
     {
       titolo: 'Mobile 5,99€/mese — Portabilità o Nuovo numero',
       icon: '📱',
@@ -302,11 +314,10 @@ export default function Listino() {
       icon: '🏠',
       offerte: DATI.residenziale.mobile.filter(o => o.prezzo === 1.99),
     },
-    { titolo: 'Fisso Fibra FTTH',       icon: '📡', offerte: fissoRes },
-    { titolo: 'Linkem FWA 5G Indoor', icon: '📶', offerte: fwaRes.filter(o => o.indoor === true), logoLinkem: true },
-    { titolo: 'Linkem FWA 5G Outdoor', icon: '📶', offerte: fwaRes.filter(o => o.indoor === false && o.id !== 'res-fwa-4g'), logoLinkem: false },
-    { titolo: 'Linkem FWA 4G', icon: '📶', offerte: fwaRes.filter(o => o.id === 'res-fwa-4g'), logoLinkem: false },
-    { titolo: 'Fisso + Mobile',          icon: '🔗', offerte: DATI.residenziale.convergente },
+    { titolo: 'Fisso Fibra FTTH',        icon: '📡', offerte: fissoRes },
+    { titolo: 'Linkem FWA 5G Indoor',    icon: '📶', offerte: fwaRes.filter(o => o.indoor === true), logoLinkem: true },
+    { titolo: 'Linkem FWA 5G Outdoor',   icon: '📶', offerte: fwaRes.filter(o => o.indoor === false && o.id !== 'res-fwa-4g'), logoLinkem: false },
+    { titolo: 'Linkem FWA 4G',           icon: '📶', offerte: fwaRes.filter(o => o.id === 'res-fwa-4g'), logoLinkem: false },
   ];
 
   const fwaBiz = DATI.business.fisso.filter(o => o.id && o.id.startsWith('biz-fwa'));
@@ -377,6 +388,7 @@ export default function Listino() {
           cerca={cerca}
           logoLinkem={s.logoLinkem}
           logoTiscali={s.logoTiscali}
+          evidenziata={s.evidenziata}
         />
       ))}
 
