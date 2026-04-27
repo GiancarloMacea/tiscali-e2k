@@ -176,7 +176,7 @@ export const CONTATTI_SUPPORTO = [
     tags: ['delivery', 'attivazione', 'FWA'],
   },
 
-  // === 0707574800 — Punto Vendita (sdoppiato per categoria reale) ===
+  // === 0707574800 — Punto Vendita (categorizzato per scopo reale) ===
   {
     id: 'pv-1',
     numero: '0707574800',
