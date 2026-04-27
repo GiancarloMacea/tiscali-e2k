@@ -2,11 +2,13 @@ import { useState } from 'react';
 import Listino from './components/Listino.jsx';
 import Configuratore from './components/Configuratore.jsx';
 import Multimedia from './components/Multimedia.jsx';
+import ContattiSupporto from './components/ContattiSupporto.jsx';
 import NotificaMese from './components/NotificaMese.jsx';
 
 const TABS = [
   { id: 'listino',       label: 'Listino',       icon: '📋' },
   { id: 'configuratore', label: 'Configuratore', icon: '⚙️' },
+  { id: 'contatti',      label: 'Contatti',      icon: '📞' },
   { id: 'multimedia',    label: 'Materiali',      icon: '📁' },
 ];
 
@@ -71,6 +73,7 @@ export default function App() {
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 overflow-x-hidden">
         {tab === 'listino'       && <Listino />}
         {tab === 'configuratore' && <Configuratore />}
+        {tab === 'contatti'      && <ContattiSupporto />}
         {tab === 'multimedia'    && <Multimedia />}
       </main>
 
