@@ -59,17 +59,17 @@ function OfferRow({ offerta, isOpen, onToggle }) {
           ${isOpen ? 'bg-tiscali-50 border-b-0' : 'hover:bg-gray-50'}`}>
 
         {/* COLONNA NOME — altezza fissa con tutto allineato verticalmente */}
-        <td className="py-0 px-3 sm:px-4" style={{ height: '72px' }}>
-          <div className="flex flex-col justify-center h-full gap-0.5">
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-gray-900 text-sm leading-tight">{offerta.nome}</span>
+        <td className="py-0 px-2 sm:px-4" style={{ height: '72px' }}>
+          <div className="flex flex-col justify-center h-full gap-0.5 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap min-w-0">
+              <span className="font-semibold text-gray-900 text-sm leading-tight break-words">{offerta.nome}</span>
               {offerta.highlight && (
                 <span className="inline-flex items-center gap-1 bg-amber-400 text-gray-900 text-[10px] font-bold px-2 py-0.5 rounded-full flex-shrink-0">
                   <IconStar /> Consigliata
                 </span>
               )}
             </div>
-            {/* Badge target — sempre su linea singola, testo non va a capo */}
+            {/* Badge target — può andare a capo su mobile se troppo lungo (fix overflow) */}
             {ts && offerta.target && (
               <span style={{
                 ...ts.badge,
@@ -77,39 +77,41 @@ function OfferRow({ offerta, isOpen, onToggle }) {
                 padding: '2px 8px',
                 borderRadius: '999px',
                 display: 'inline-block',
-                whiteSpace: 'nowrap',
+                whiteSpace: 'normal',
+                wordBreak: 'break-word',
                 alignSelf: 'flex-start',
                 lineHeight: '16px',
+                maxWidth: '100%',
               }}>
                 {offerta.target.label}
               </span>
             )}
             {!offerta.target && (
-              <p className="text-xs text-gray-500 leading-tight">{offerta.sub || offerta.sottotitolo}</p>
+              <p className="text-xs text-gray-500 leading-tight break-words">{offerta.sub || offerta.sottotitolo}</p>
             )}
           </div>
         </td>
 
-        {/* COLONNA PREZZO */}
-        <td className="py-0 px-3 sm:px-4" style={{ height: '72px' }}>
-          <div className="flex flex-col justify-center h-full">
+        {/* COLONNA PREZZO — su mobile font ridotto + wrap aggressivo per evitare overflow */}
+        <td className="py-0 px-2 sm:px-4" style={{ height: '72px' }}>
+          <div className="flex flex-col justify-center h-full min-w-0">
             {offerta.costoTotale ? (
               <>
-                <div className="flex items-baseline gap-1 flex-wrap">
-                  <span className="font-condensed text-2xl font-bold text-tiscali-700">{offerta.costoTotale.label}</span>
-                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded">+IVA</span>}
+                <div className="flex items-baseline gap-1 flex-wrap min-w-0">
+                  <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap">{offerta.costoTotale.label}</span>
+                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded whitespace-nowrap">+IVA</span>}
                 </div>
-                <p className="text-xs text-gray-500 font-medium">{offerta.costoTotale.nota}</p>
+                <p className="text-[11px] sm:text-xs text-gray-500 font-medium break-words">{offerta.costoTotale.nota}</p>
               </>
             ) : (
               <>
-                <div className="flex items-baseline gap-1 flex-wrap">
-                  <span className="font-condensed text-2xl font-bold text-tiscali-700">{offerta.label || offerta.prezzoLabel}</span>
-                  <span className="text-xs text-gray-500">{offerta.suf || offerta.suffisso}</span>
-                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded">+IVA</span>}
+                <div className="flex items-baseline gap-1 flex-wrap min-w-0">
+                  <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap">{offerta.label || offerta.prezzoLabel}</span>
+                  <span className="text-[11px] sm:text-xs text-gray-500 break-words">{offerta.suf || offerta.suffisso}</span>
+                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded whitespace-nowrap">+IVA</span>}
                 </div>
                 {offerta.prezzoStep && (
-                  <p className="text-[10px] text-orange-600 font-semibold whitespace-nowrap">{offerta.prezzoStep}</p>
+                  <p className="text-[10px] text-orange-600 font-semibold break-words">{offerta.prezzoStep}</p>
                 )}
               </>
             )}
@@ -117,16 +119,16 @@ function OfferRow({ offerta, isOpen, onToggle }) {
         </td>
 
         {/* COLONNA INCLUSO */}
-        <td className="py-0 px-3 sm:px-4 hidden lg:table-cell" style={{ height: '72px' }}>
+        <td className="py-0 px-2 sm:px-4 hidden lg:table-cell" style={{ height: '72px' }}>
           <div className="flex items-center h-full">
             <span className="text-xs text-gray-600 leading-tight">{(offerta.features || [])[0]}</span>
           </div>
         </td>
 
         {/* COLONNA DETTAGLI */}
-        <td className="py-0 px-3 sm:px-4 text-right" style={{ height: '72px' }}>
+        <td className="py-0 px-2 sm:px-4 text-right" style={{ height: '72px' }}>
           <div className="flex items-center justify-end h-full">
-            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-tiscali-600">
+            <span className="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-medium text-tiscali-600 whitespace-nowrap">
               {isOpen ? 'Chiudi' : 'Dettagli'}
               <IconChevron open={isOpen} />
             </span>
@@ -136,7 +138,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
 
       {isOpen && (
         <tr className="bg-tiscali-50 border-b border-tiscali-100">
-          <td colSpan={4} className="px-3 sm:px-4 pb-5 pt-2">
+          <td colSpan={4} className="px-2 sm:px-4 pb-5 pt-2">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Caratteristiche */}
               <div>
@@ -155,7 +157,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
                 <div className="space-y-1.5">
                   {Object.entries(offerta.costi || {}).map(([k, v]) => (
                     <div key={k} className="flex justify-between items-baseline gap-3 text-sm border-b border-tiscali-100 pb-1 pr-1">
-                      <span className="text-gray-500 truncate">{k}</span>
+                      <span className="text-gray-500 break-words min-w-0 flex-1">{k}</span>
                       <span className="font-semibold text-gray-800 text-right whitespace-nowrap flex-shrink-0">{v}</span>
                     </div>
                   ))}
@@ -251,15 +253,25 @@ function Sezione({ titolo, icon, offerte, aperta, onToggle, cerca, logoLinkem, l
         <span className="text-xs text-gray-400 font-medium">{visibili.length} {visibili.length === 1 ? 'offerta' : 'offerte'}</span>
       </div>
 
-      {/* Tabella */}
-      <div className="overflow-x-auto rounded-xl border border-gray-100 shadow-md w-full bg-white">
-        <table className="w-full min-w-full text-left">
+      {/* Tabella — Generato con AI Claude · Apr 2026
+          table-fixed su mobile costringe le colonne a larghezze predefinite,
+          così nessun contenuto largo (badge target lunghi, prezzi grandi)
+          può espandere la tabella oltre il viewport del cellulare.
+          Su sm+ torniamo al layout auto per usare lo spazio in modo naturale. */}
+      <div className="rounded-xl border border-gray-100 shadow-md w-full bg-white overflow-hidden">
+        <table className="w-full table-fixed sm:table-auto text-left">
+          <colgroup>
+            <col style={{ width: '55%' }} className="sm:w-auto" />
+            <col style={{ width: '27%' }} className="sm:w-auto" />
+            <col className="hidden lg:table-column" />
+            <col style={{ width: '18%' }} className="sm:w-auto" />
+          </colgroup>
           <thead>
             <tr className="bg-tiscali-700 text-white text-xs uppercase tracking-wider">
-              <th className="py-2.5 px-4 font-semibold">Offerta</th>
-              <th className="py-2.5 px-4 font-semibold">Prezzo</th>
+              <th className="py-2.5 px-2 sm:px-4 font-semibold">Offerta</th>
+              <th className="py-2.5 px-2 sm:px-4 font-semibold">Prezzo</th>
               <th className="py-2.5 px-4 font-semibold hidden lg:table-cell">Incluso</th>
-              <th className="py-2.5 px-4"></th>
+              <th className="py-2.5 px-2 sm:px-4"></th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-100">
