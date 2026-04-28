@@ -1,4 +1,4 @@
-import { useState, Component } from 'react';
+import { useState, useEffect, useRef, Fragment, Component } from 'react';
 import Listino from './components/Listino.jsx';
 import Configuratore from './components/Configuratore.jsx';
 import Multimedia from './components/Multimedia.jsx';
@@ -56,6 +56,110 @@ class ErrorBoundary extends Component {
   }
 }
 
+// ─────────────────────────────────────────────────────────────────────
+// NavTabs · Generato con AI Claude · Aprile 2026
+// Tab bar con:
+//  - divisori verticali sottili tra i tab (li separa visivamente come "cassetti")
+//  - micro-animazione scroll hint al primo mount (se i tab sbordano):
+//    fa un piccolo scroll a destra e ritorna, per far capire che si scorre
+//  - gradient overlay a destra che indica c'è altro da scorrere su mobile
+//  - sessionStorage previene che l'animazione si rifaccia ad ogni remount
+// ─────────────────────────────────────────────────────────────────────
+function NavTabs({ tabs, active, onChange }) {
+  const scrollRef = useRef(null);
+  const [hasOverflow, setHasOverflow] = useState(false);
+  const [atEnd, setAtEnd] = useState(false);
+
+  // Detect overflow al mount + on resize + on scroll
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const update = () => {
+      const overflow = el.scrollWidth > el.clientWidth + 1;
+      setHasOverflow(overflow);
+      setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1);
+    };
+
+    update();
+    el.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      el.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
+  // Scroll hint: micro-animazione al primo mount per far capire
+  // che il menu è scrollabile orizzontalmente.
+  // Una volta mostrata, sessionStorage la disabilita per la sessione.
+  useEffect(() => {
+    if (!hasOverflow) return;
+    if (typeof window === 'undefined') return;
+    try {
+      if (sessionStorage.getItem('__nav_hint_shown')) return;
+    } catch (e) { /* sessionStorage non disponibile */ }
+
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const t1 = setTimeout(() => {
+      el.scrollTo({ left: 70, behavior: 'smooth' });
+    }, 700);
+    const t2 = setTimeout(() => {
+      el.scrollTo({ left: 0, behavior: 'smooth' });
+      try { sessionStorage.setItem('__nav_hint_shown', '1'); } catch (e) {}
+    }, 1500);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [hasOverflow]);
+
+  return (
+    <nav className="bg-tiscali-600 relative">
+      <div className="max-w-7xl mx-auto px-safe">
+        <div ref={scrollRef} className="flex overflow-x-auto scrollbar-none">
+          {tabs.map((t, idx) => (
+            <Fragment key={t.id}>
+              {idx > 0 && (
+                <span
+                  className="self-center w-px h-6 bg-white/15 flex-shrink-0"
+                  aria-hidden="true"
+                />
+              )}
+              <button
+                onClick={() => onChange(t.id)}
+                className={`flex items-center gap-2 px-4 sm:px-6 py-3.5 text-sm font-semibold whitespace-nowrap flex-shrink-0 transition-all duration-200 border-b-2
+                  ${active === t.id
+                    ? 'bg-white/10 text-white border-b-white'
+                    : 'text-white/70 border-b-transparent hover:text-white hover:bg-white/5 active:bg-white/10'
+                  }`}
+              >
+                <span className="text-base">{t.icon}</span>
+                <span>{t.label}</span>
+              </button>
+            </Fragment>
+          ))}
+        </div>
+      </div>
+
+      {/* Gradient mask a destra: indica visivamente che ci sono altri tab da
+          scorrere. Si fade-out quando l'utente arriva a fine scroll.
+          pointer-events-none così non blocca i tap sui bottoni sotto. */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 transition-opacity duration-300 sm:hidden"
+        style={{
+          background: 'linear-gradient(to left, #4A3F8E 0%, rgba(74,63,142,0) 100%)',
+          opacity: hasOverflow && !atEnd ? 1 : 0,
+        }}
+        aria-hidden="true"
+      />
+    </nav>
+  );
+}
+
 const TABS = [
   { id: 'listino',       label: 'Listino',       icon: '📋' },
   { id: 'configuratore', label: 'Configuratore', icon: '⚙️' },
@@ -99,27 +203,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* ── NAV BAR VIOLA — stile Station ── */}
-        <nav className="bg-tiscali-600">
-          <div className="max-w-7xl mx-auto px-safe">
-            <div className="flex overflow-x-auto scrollbar-none">
-              {TABS.map(t => (
-                <button
-                  key={t.id}
-                  onClick={() => setTab(t.id)}
-                  className={`flex items-center gap-2 px-6 py-3.5 text-sm font-semibold whitespace-nowrap flex-shrink-0 transition-all border-b-2
-                    ${tab === t.id
-                      ? 'bg-white/10 text-white border-white'
-                      : 'text-white/70 border-transparent hover:text-white hover:bg-white/10'
-                    }`}
-                >
-                  <span>{t.icon}</span>
-                  <span>{t.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </nav>
+        {/* ── NAV BAR VIOLA — stile Station con scroll hint e divisori ── */}
+        <NavTabs tabs={TABS} active={tab} onChange={setTab} />
       </header>
 
       {/* ── CONTENUTO ── */}
