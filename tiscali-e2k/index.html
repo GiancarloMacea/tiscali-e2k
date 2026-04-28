@@ -16,36 +16,48 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <title>Tiscali E2K — Area Manager</title>
+
+    <!--
+      KILL SWITCH SERVICE WORKER · Generato con AI Claude · Aprile 2026
+
+      Questo script gira PRIMA che il bundle React si carichi.
+      - Disinstalla QUALSIASI service worker registrato (incluso il vecchio
+        rotto v1 che cancellava la cache su visibilitychange).
+      - Cancella TUTTE le cache (incluse quelle del SW rotto).
+      - Se ha trovato un SW vecchio attivo, fa un reload UNA VOLTA per
+        ripartire pulito senza il SW che intercetta i fetch.
+
+      Questo elimina alla radice la causa della schermata bianca.
+      Niente più SW, niente più cache rotta.
+    -->
+    <script>
+      (function () {
+        if (!('serviceWorker' in navigator)) return;
+        var hadSW = false;
+        try {
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            if (regs && regs.length > 0) hadSW = true;
+            return Promise.all(regs.map(function (r) { return r.unregister(); }));
+          }).then(function () {
+            if ('caches' in window) {
+              return caches.keys().then(function (keys) {
+                return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+              });
+            }
+          }).then(function () {
+            // Se c'era un SW vecchio attivo, ricarico una sola volta per
+            // ripartire pulito (sessionStorage previene loop infiniti).
+            if (hadSW && !sessionStorage.getItem('__sw_killed')) {
+              sessionStorage.setItem('__sw_killed', '1');
+              window.location.reload();
+            }
+          }).catch(function () { /* silenzioso */ });
+        } catch (e) { /* silenzioso */ }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-
-    <!--
-      Service Worker — registrazione + auto-update sicuro
-      Generato con AI Claude · Aprile 2026
-
-      RIMOSSO il vecchio handler `visibilitychange → CLEAR_CACHE`
-      che causava schermate bianche su mobile (cancellava tutta la cache
-      ogni volta che l'app andava in background; con rete debole l'app
-      non poteva più caricare nulla).
-    -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {});
-        });
-
-        // Quando un nuovo SW prende il controllo (es. dopo un fix pubblicato)
-        // ricarico una sola volta per servire la versione aggiornata.
-        // Così gli utenti con SW vecchio rotto si auto-aggiornano al primo refresh.
-        let __reloaded = false;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (__reloaded) return;
-          __reloaded = true;
-          window.location.reload();
-        });
-      }
-    </script>
   </body>
 </html>
