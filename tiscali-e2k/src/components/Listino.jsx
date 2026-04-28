@@ -92,30 +92,56 @@ function OfferRow({ offerta, isOpen, onToggle }) {
           </div>
         </td>
 
-        {/* COLONNA PREZZO — su mobile font ridotto + wrap aggressivo per evitare overflow */}
+        {/* COLONNA PREZZO — Generato con AI Claude · Apr 2026
+            Layout uniforme: label grande in alto, suffisso piccolo SEMPRE sotto.
+            Niente badge +IVA accanto al prezzo: quando il suffisso contiene già
+            "+IVA" (tutte le business), il badge esterno era ridondante e su
+            mobile si appiccicava a destra forzando overflow.
+            Il badge giallo +IVA appare solo se il suffisso NON include "+IVA". */}
         <td className="py-0 px-2 sm:px-4" style={{ height: '72px' }}>
-          <div className="flex flex-col justify-center h-full min-w-0">
-            {offerta.costoTotale ? (
-              <>
-                <div className="flex items-baseline gap-1 flex-wrap min-w-0">
-                  <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap">{offerta.costoTotale.label}</span>
-                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded whitespace-nowrap">+IVA</span>}
-                </div>
-                <p className="text-[11px] sm:text-xs text-gray-500 font-medium break-words">{offerta.costoTotale.nota}</p>
-              </>
-            ) : (
-              <>
-                <div className="flex items-baseline gap-1 flex-wrap min-w-0">
-                  <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap">{offerta.label || offerta.prezzoLabel}</span>
-                  <span className="text-[11px] sm:text-xs text-gray-500 break-words">{offerta.suf || offerta.suffisso}</span>
-                  {offerta.iva && <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded whitespace-nowrap">+IVA</span>}
-                </div>
-                {offerta.prezzoStep && (
-                  <p className="text-[10px] text-orange-600 font-semibold break-words">{offerta.prezzoStep}</p>
+          {(() => {
+            const label = offerta.label || offerta.prezzoLabel || '';
+            const suffix = offerta.suf || offerta.suffisso || '';
+            const isNumericLabel = /[\d€]/.test(label);
+            const showIvaBadge = offerta.iva && !/iva/i.test(suffix);
+            return (
+              <div className="flex flex-col justify-center h-full min-w-0">
+                {offerta.costoTotale ? (
+                  <>
+                    <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap leading-tight">
+                      {offerta.costoTotale.label}
+                    </span>
+                    <p className="text-[11px] sm:text-xs text-gray-500 font-medium break-words leading-tight mt-0.5">
+                      {offerta.costoTotale.nota}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex items-center gap-1.5 flex-wrap min-w-0">
+                      <span className={`font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 leading-tight ${isNumericLabel ? 'whitespace-nowrap' : 'break-words'}`}>
+                        {label}
+                      </span>
+                      {showIvaBadge && (
+                        <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded whitespace-nowrap">
+                          +IVA
+                        </span>
+                      )}
+                    </div>
+                    {suffix && (
+                      <p className="text-[11px] sm:text-xs text-gray-500 break-words leading-tight mt-0.5">
+                        {suffix}
+                      </p>
+                    )}
+                    {offerta.prezzoStep && (
+                      <p className="text-[10px] text-orange-600 font-semibold break-words leading-tight mt-0.5">
+                        {offerta.prezzoStep}
+                      </p>
+                    )}
+                  </>
                 )}
-              </>
-            )}
-          </div>
+              </div>
+            );
+          })()}
         </td>
 
         {/* COLONNA INCLUSO */}
