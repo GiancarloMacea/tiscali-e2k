@@ -59,7 +59,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
           ${isOpen ? 'bg-tiscali-50 border-b-0' : 'hover:bg-gray-50'}`}>
 
         {/* COLONNA NOME — altezza fissa con tutto allineato verticalmente */}
-        <td className="py-0 px-4" style={{ height: '72px' }}>
+        <td className="py-0 px-3 sm:px-4" style={{ height: '72px' }}>
           <div className="flex flex-col justify-center h-full gap-0.5">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-gray-900 text-sm leading-tight">{offerta.nome}</span>
@@ -91,7 +91,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
         </td>
 
         {/* COLONNA PREZZO */}
-        <td className="py-0 px-4" style={{ height: '72px' }}>
+        <td className="py-0 px-3 sm:px-4" style={{ height: '72px' }}>
           <div className="flex flex-col justify-center h-full">
             {offerta.costoTotale ? (
               <>
@@ -117,14 +117,14 @@ function OfferRow({ offerta, isOpen, onToggle }) {
         </td>
 
         {/* COLONNA INCLUSO */}
-        <td className="py-0 px-4 hidden lg:table-cell" style={{ height: '72px' }}>
+        <td className="py-0 px-3 sm:px-4 hidden lg:table-cell" style={{ height: '72px' }}>
           <div className="flex items-center h-full">
             <span className="text-xs text-gray-600 leading-tight">{(offerta.features || [])[0]}</span>
           </div>
         </td>
 
         {/* COLONNA DETTAGLI */}
-        <td className="py-0 px-4 text-right" style={{ height: '72px' }}>
+        <td className="py-0 px-3 sm:px-4 text-right" style={{ height: '72px' }}>
           <div className="flex items-center justify-end h-full">
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-tiscali-600">
               {isOpen ? 'Chiudi' : 'Dettagli'}
@@ -136,7 +136,7 @@ function OfferRow({ offerta, isOpen, onToggle }) {
 
       {isOpen && (
         <tr className="bg-tiscali-50 border-b border-tiscali-100">
-          <td colSpan={4} className="px-4 pb-5 pt-2">
+          <td colSpan={4} className="px-3 sm:px-4 pb-5 pt-2">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Caratteristiche */}
               <div>
@@ -150,13 +150,13 @@ function OfferRow({ offerta, isOpen, onToggle }) {
                 </ul>
               </div>
               {/* Costi */}
-              <div>
+              <div className="min-w-0">
                 <p className="text-[11px] font-bold text-tiscali-600 uppercase tracking-widest mb-2">Costi</p>
                 <div className="space-y-1.5">
                   {Object.entries(offerta.costi || {}).map(([k, v]) => (
-                    <div key={k} className="flex justify-between text-sm border-b border-tiscali-100 pb-1">
-                      <span className="text-gray-500">{k}</span>
-                      <span className="font-semibold text-gray-800">{v}</span>
+                    <div key={k} className="flex justify-between items-baseline gap-3 text-sm border-b border-tiscali-100 pb-1 pr-1">
+                      <span className="text-gray-500 truncate">{k}</span>
+                      <span className="font-semibold text-gray-800 text-right whitespace-nowrap flex-shrink-0">{v}</span>
                     </div>
                   ))}
                   {offerta.iva && (

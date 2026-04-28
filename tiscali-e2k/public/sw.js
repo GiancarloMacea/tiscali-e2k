@@ -1,51 +1,40 @@
 /*
- * Service Worker · KILL-SWITCH · Tiscali E2K
+ * Service Worker · MINIMAL PASSTHROUGH · Tiscali E2K
  * Generato con AI Claude · Aprile 2026
  *
- * Questo file esiste SOLO per gestire il caso in cui un browser abbia
- * la vecchia versione di sw.js in cache e provi a usarla. Quando viene
- * eseguito:
- *  1. Cancella TUTTE le cache (incluso il bug del v1 che cancellava
- *     la cache su visibilitychange).
- *  2. Disinstalla se stesso.
- *  3. Forza un reload di tutti i client connessi.
+ * Scopo: soddisfare i criteri Chrome per il prompt "Installa app"
+ * (manifest valido + SW registrato con fetch handler) SENZA introdurre
+ * cache aggressive che possano causare di nuovo schermate bianche.
  *
- * Dopo questa operazione, nessun service worker resta registrato per
- * questo dominio. Il browser carica l'app come una normale web app:
- *  - Niente più cache rotte.
- *  - Niente più handler che cancellano cache su visibilitychange.
- *  - L'app non può più diventare bianca per colpa del SW.
+ * Cosa fa:
+ *  - install:  skipWaiting (non aspetta che le tab vecchie chiudano)
+ *  - activate: clients.claim (prende il controllo subito) + cancella TUTTE
+ *              le vecchie cache (cleanup del SW v1 rotto se ancora presente)
+ *  - fetch:    handler vuoto = lascia ogni richiesta al browser, niente cache
  *
- * In index.html non c'è più alcuna registrazione di service worker,
- * quindi questo file non verrà più scaricato dai nuovi visitatori.
- * Resta qui solo per gestire i client già infetti.
+ * Trade-off cosciente:
+ *  - NO modalità offline (non cachea l'app)
+ *  - SÌ installabilità PWA (icona sulla home, schermo intero, ecc.)
+ *  - Massima sicurezza: nessun bug di cache può rompere l'app
  */
 
 self.addEventListener('install', function () {
-  // Attivati subito, non aspettare che le altre tab si chiudano.
   self.skipWaiting();
 });
 
 self.addEventListener('activate', function (event) {
   event.waitUntil((async function () {
     try {
-      // 1) Cancella tutte le cache
       const keys = await caches.keys();
       await Promise.all(keys.map(function (k) { return caches.delete(k); }));
-
-      // 2) Disinstalla questo service worker
-      await self.registration.unregister();
-
-      // 3) Ricarica tutti i client connessi così tornano puliti
-      const clients = await self.clients.matchAll({ type: 'window' });
-      clients.forEach(function (client) {
-        try { client.navigate(client.url); } catch (e) {}
-      });
-    } catch (e) {
-      // silenzioso
-    }
+    } catch (e) { /* silenzioso */ }
+    await self.clients.claim();
   })());
 });
 
-// Per le richieste fetch: lascio tutto al browser, non intercetto nulla.
-// Non aggiungo l'event listener così le richieste vanno dirette in rete.
+// Fetch handler vuoto: NECESSARIO per soddisfare i criteri PWA installable
+// di Chrome, ma non chiama event.respondWith() → il browser gestisce tutto
+// normalmente senza intercettazione del SW.
+self.addEventListener('fetch', function () {
+  // intenzionalmente vuoto
+});

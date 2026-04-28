@@ -92,7 +92,7 @@ export default function App() {
 
       {/* ── HEADER BIANCO con logo ── */}
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-safe">
           <div className="flex items-center justify-between py-4">
             <TiscaliLogo />
             <span className="text-xs text-gray-400 hidden sm:block">Uso interno riservato · Aprile 2026</span>
@@ -101,7 +101,7 @@ export default function App() {
 
         {/* ── NAV BAR VIOLA — stile Station ── */}
         <nav className="bg-tiscali-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-safe">
             <div className="flex overflow-x-auto scrollbar-none">
               {TABS.map(t => (
                 <button
@@ -123,7 +123,7 @@ export default function App() {
       </header>
 
       {/* ── CONTENUTO ── */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 overflow-x-hidden">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-safe py-8 overflow-x-hidden">
         <ErrorBoundary label={`Sezione "${tab}" non disponibile`}>
           {tab === 'listino'       && <Listino />}
           {tab === 'configuratore' && <Configuratore />}
@@ -134,7 +134,7 @@ export default function App() {
 
       {/* ── FOOTER ── */}
       <footer className="bg-white border-t border-gray-200 py-4 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-safe">
           <p className="text-xs text-gray-400 text-center">Tiscali E2K · Area Manager Tool · Uso interno riservato</p>
         </div>
       </footer>

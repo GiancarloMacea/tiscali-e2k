@@ -41,4 +41,27 @@
     white-space: nowrap;
     max-width: 100%;
   }
+  /*
+   * Padding orizzontale che rispetta la safe-area di iPhone con notch.
+   * Su dispositivi senza safe-area resta minimo 1rem (16px) su mobile,
+   * 1.5rem (24px) da sm in su, 2rem (32px) da lg in su.
+   * Su iPhone X+ in landscape si espande automaticamente al bordo sicuro.
+   * Generato con AI Claude · Aprile 2026
+   */
+  .px-safe {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  @media (min-width: 640px) {
+    .px-safe {
+      padding-left: max(1.5rem, env(safe-area-inset-left));
+      padding-right: max(1.5rem, env(safe-area-inset-right));
+    }
+  }
+  @media (min-width: 1024px) {
+    .px-safe {
+      padding-left: max(2rem, env(safe-area-inset-left));
+      padding-right: max(2rem, env(safe-area-inset-right));
+    }
+  }
 }

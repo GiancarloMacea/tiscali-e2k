@@ -2,7 +2,8 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover abilita le CSS env(safe-area-inset-*) su iPhone X+ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json" />
@@ -16,48 +17,36 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <title>Tiscali E2K — Area Manager</title>
-
-    <!--
-      KILL SWITCH SERVICE WORKER · Generato con AI Claude · Aprile 2026
-
-      Questo script gira PRIMA che il bundle React si carichi.
-      - Disinstalla QUALSIASI service worker registrato (incluso il vecchio
-        rotto v1 che cancellava la cache su visibilitychange).
-      - Cancella TUTTE le cache (incluse quelle del SW rotto).
-      - Se ha trovato un SW vecchio attivo, fa un reload UNA VOLTA per
-        ripartire pulito senza il SW che intercetta i fetch.
-
-      Questo elimina alla radice la causa della schermata bianca.
-      Niente più SW, niente più cache rotta.
-    -->
-    <script>
-      (function () {
-        if (!('serviceWorker' in navigator)) return;
-        var hadSW = false;
-        try {
-          navigator.serviceWorker.getRegistrations().then(function (regs) {
-            if (regs && regs.length > 0) hadSW = true;
-            return Promise.all(regs.map(function (r) { return r.unregister(); }));
-          }).then(function () {
-            if ('caches' in window) {
-              return caches.keys().then(function (keys) {
-                return Promise.all(keys.map(function (k) { return caches.delete(k); }));
-              });
-            }
-          }).then(function () {
-            // Se c'era un SW vecchio attivo, ricarico una sola volta per
-            // ripartire pulito (sessionStorage previene loop infiniti).
-            if (hadSW && !sessionStorage.getItem('__sw_killed')) {
-              sessionStorage.setItem('__sw_killed', '1');
-              window.location.reload();
-            }
-          }).catch(function () { /* silenzioso */ });
-        } catch (e) { /* silenzioso */ }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!--
+      Service Worker · Generato con AI Claude · Aprile 2026
+
+      Strategia "minimal/passthrough":
+      - Soddisfa i criteri Chrome per "Installa app" (manifest + SW con fetch).
+      - NON intercetta i fetch (fetch handler vuoto = lascia tutto al browser).
+      - NON cachea nulla → impossibile servire una versione vecchia rotta.
+      - skipWaiting + clients.claim per attivazione immediata.
+
+      Auto-reload sicuro: quando un nuovo SW prende il controllo (perché abbiamo
+      pubblicato un fix), ricarico una sola volta per servire la versione
+      aggiornata. sessionStorage previene loop infiniti.
+    -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (sessionStorage.getItem('__sw_reloaded')) return;
+          sessionStorage.setItem('__sw_reloaded', '1');
+          window.location.reload();
+        });
+      }
+    </script>
   </body>
 </html>
