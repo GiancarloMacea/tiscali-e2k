@@ -51,6 +51,10 @@ export default function NotificaMese() {
   const giorno = oggi.getDate();
   const ultimoGiorno = new Date(oggi.getFullYear(), oggi.getMonth() + 1, 0).getDate();
   const giorniAlFine = ultimoGiorno - giorno + 1;
+  // FIX (AI Claude · Apr 2026): variabile `tipo` non era definita.
+  // Causava ReferenceError → schermata bianca dopo ~1.2s sul cellulare
+  // ogni volta che la notifica fine/inizio mese tentava di renderizzarsi.
+  const tipo = tipoNotifica();
 
   return (
     <>
