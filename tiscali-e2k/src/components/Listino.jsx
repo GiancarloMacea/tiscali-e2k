@@ -48,6 +48,28 @@ const TARGET_STYLE = {
   },
 };
 
+// ── Helper: separa numero+€ dal suffisso ──────────────────────────────────────
+// Generato con AI Claude · Aprile 2026
+//
+// Alcune offerte hanno il label scritto in modo "atomico" tipo:
+//   '35,90€+IVA/mese'   →   { price: '35,90€', suffix: '+IVA/mese' }
+//   '29,90€/mese'       →   { price: '29,90€', suffix: '/mese' }
+//   '35,90€'            →   { price: '35,90€', suffix: '' }
+//
+// In quei casi il suffisso veniva renderizzato grande quanto il prezzo.
+// Questa funzione lo splitta così possiamo mostrare prezzo grande + suffisso
+// piccolo sotto, in modo coerente per TUTTE le offerte (residenziale, business,
+// convergenza, premium).
+function splitPriceLabel(label) {
+  if (!label || typeof label !== 'string') return { price: label || '', suffix: '' };
+  const idx = label.indexOf('€');
+  if (idx === -1) return { price: label, suffix: '' };
+  return {
+    price: label.slice(0, idx + 1),
+    suffix: label.slice(idx + 1).trim(),
+  };
+}
+
 // ── Riga espandibile ──────────────────────────────────────────────────────────
 function OfferRow({ offerta, isOpen, onToggle }) {
   const ts = offerta.target ? TARGET_STYLE[offerta.target.color] : null;
@@ -106,16 +128,29 @@ function OfferRow({ offerta, isOpen, onToggle }) {
             const showIvaBadge = offerta.iva && !/iva/i.test(suffix);
             return (
               <div className="flex flex-col justify-center h-full min-w-0">
-                {offerta.costoTotale ? (
-                  <>
-                    <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap leading-tight">
-                      {offerta.costoTotale.label}
-                    </span>
-                    <p className="text-[11px] sm:text-xs text-gray-500 font-medium break-words leading-tight mt-0.5">
-                      {offerta.costoTotale.nota}
-                    </p>
-                  </>
-                ) : (
+                {offerta.costoTotale ? (() => {
+                  // Convergenza: il label può essere tipo '35,90€+IVA/mese'
+                  // o '29,90€/mese'. Lo splitto per mostrare il prezzo grande
+                  // e il suffisso piccolo sotto.
+                  const { price: ctPrice, suffix: ctSuffix } = splitPriceLabel(offerta.costoTotale.label);
+                  return (
+                    <>
+                      <span className="font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 whitespace-nowrap leading-tight">
+                        {ctPrice}
+                      </span>
+                      {ctSuffix && (
+                        <p className="text-[11px] sm:text-xs text-gray-500 break-words leading-tight mt-0.5">
+                          {ctSuffix}
+                        </p>
+                      )}
+                      {offerta.costoTotale.nota && (
+                        <p className="text-[11px] sm:text-xs text-gray-500 font-medium break-words leading-tight mt-0.5">
+                          {offerta.costoTotale.nota}
+                        </p>
+                      )}
+                    </>
+                  );
+                })() : (
                   <>
                     <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                       <span className={`font-condensed text-xl sm:text-2xl font-bold text-tiscali-700 leading-tight ${isNumericLabel ? 'whitespace-nowrap' : 'break-words'}`}>
@@ -190,13 +225,21 @@ function OfferRow({ offerta, isOpen, onToggle }) {
                   {offerta.iva && (
                     <p className="text-[11px] text-amber-600 font-medium pt-1">* Prezzi IVA esclusa (22%)</p>
                   )}
-                  {offerta.costoTotale && (
-                    <div className="mt-3 bg-tiscali-600 rounded-lg px-3 py-2.5 text-white">
-                      <p className="text-[10px] font-bold uppercase tracking-wider opacity-80 mb-0.5">Costo mensile totale (fisso + mobile)</p>
-                      <p className="font-condensed text-2xl font-bold">{offerta.costoTotale.label}</p>
-                      <p className="text-[11px] opacity-75 mt-0.5">{offerta.costoTotale.nota}</p>
-                    </div>
-                  )}
+                  {offerta.costoTotale && (() => {
+                    const { price: ctPrice, suffix: ctSuffix } = splitPriceLabel(offerta.costoTotale.label);
+                    return (
+                      <div className="mt-3 bg-tiscali-600 rounded-lg px-3 py-2.5 text-white">
+                        <p className="text-[10px] font-bold uppercase tracking-wider opacity-80 mb-0.5">Costo mensile totale (fisso + mobile)</p>
+                        <div className="flex items-baseline gap-1.5 flex-wrap">
+                          <p className="font-condensed text-2xl font-bold leading-none">{ctPrice}</p>
+                          {ctSuffix && <span className="text-xs opacity-90 font-medium">{ctSuffix}</span>}
+                        </div>
+                        {offerta.costoTotale.nota && (
+                          <p className="text-[11px] opacity-75 mt-0.5">{offerta.costoTotale.nota}</p>
+                        )}
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
               {/* Dettagli contrattuali */}
