@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const CATEGORIE = [
   { id: 'tutte',      label: 'Tutti',           icon: '📁' },
+  { id: 'loghi',      label: 'Loghi',           icon: '🏷️' },
   { id: 'brochure',  label: 'Infoblocco',         icon: '📑' },
   { id: 'social',     label: 'Materiali Social',  icon: '📲' },
   { id: 'formazione', label: 'Formazione',        icon: '📚' },
@@ -9,6 +10,7 @@ const CATEGORIE = [
 ];
 
 const categoriaFromPath = (p) => {
+  if (p.startsWith('loghi/'))      return 'loghi';
   if (p.startsWith('brochure/'))   return 'brochure';
   if (p.startsWith('promo/'))      return 'social';
   if (p.startsWith('social/'))     return 'social';
@@ -16,6 +18,29 @@ const categoriaFromPath = (p) => {
   if (p.startsWith('formazione/')) return 'formazione';
   return 'schede';
 };
+
+// ── File statici (servered da /public, no Vercel Blob) ─────────────────────
+// Generato con AI Claude · Aprile 2026
+// I loghi Tiscali e Linkem sono asset statici in /public/loghi/ (servono
+// dal CDN Vercel direttamente). Li mostriamo nella sezione Materiali
+// insieme ai file Blob così l'utente li può consultare e scaricare per
+// usarli in presentazioni, allegati email, ecc. senza duplicare i file.
+const FILE_STATICI = [
+  {
+    pathname: 'loghi/logo-tiscali.png',
+    url: '/loghi/logo-tiscali.png',
+    size: 120932,
+    uploadedAt: '2026-04-28T00:00:00.000Z',
+    static: true,
+  },
+  {
+    pathname: 'loghi/logo-linkem.png',
+    url: '/loghi/logo-linkem.png',
+    size: 139402,
+    uploadedAt: '2026-04-28T00:00:00.000Z',
+    static: true,
+  },
+];
 
 const formatSize = (b) => {
   if (!b) return '';
@@ -36,13 +61,16 @@ function FileCard({ file }) {
   const data = file.uploadedAt
     ? new Date(file.uploadedAt).toLocaleDateString('it-IT')
     : '';
-  const isImage = ['png','jpg','jpeg','webp'].includes(ext);
+  const isImage = ['png','jpg','jpeg','webp','svg'].includes(ext);
+  // I loghi devono mostrarsi interi (con padding), non croppati come una foto.
+  const isLogo = file.pathname.startsWith('loghi/');
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-tiscali-300 transition-all flex flex-col gap-3 p-4">
-      <div className="bg-tiscali-50 rounded-lg h-28 flex items-center justify-center overflow-hidden">
+      <div className={`rounded-lg h-28 flex items-center justify-center overflow-hidden ${isLogo ? 'bg-white border border-gray-100 p-3' : 'bg-tiscali-50'}`}>
         {isImage
-          ? <img src={file.url} alt={nome} className="h-full w-full object-cover rounded-lg"
+          ? <img src={file.url} alt={nome}
+              className={`max-h-full max-w-full ${isLogo ? 'object-contain' : 'h-full w-full object-cover rounded-lg'}`}
               onError={e => { e.target.style.display='none'; }} />
           : <span className="text-4xl">{EXT_ICONS[ext] || '📎'}</span>
         }
@@ -120,7 +148,21 @@ export default function Multimedia() {
     carica();
   }, []);
 
-  const visibili = files.filter(f => {
+  // I file statici (loghi) sono sempre presenti, indipendentemente dalla
+  // API Blob. Vengono uniti ai file Blob, con dedup per pathname nel caso
+  // qualcuno in futuro carichi anche loghi/* sul Blob.
+  const tuttiFiles = (() => {
+    const seen = new Set();
+    const out = [];
+    [...FILE_STATICI, ...files].forEach(f => {
+      if (seen.has(f.pathname)) return;
+      seen.add(f.pathname);
+      out.push(f);
+    });
+    return out;
+  })();
+
+  const visibili = tuttiFiles.filter(f => {
     const matchCat  = cat === 'tutte' || categoriaFromPath(f.pathname) === cat;
     const matchText = !cerca || f.pathname.toLowerCase().includes(cerca.toLowerCase());
     return matchCat && matchText;
@@ -157,17 +199,20 @@ export default function Multimedia() {
         </div>
       </div>
 
+      {/* Spinner caricamento materiali Blob — la grid sotto continua a
+          mostrare i file statici (loghi) anche durante il caricamento */}
       {loading && (
-        <div className="flex flex-col items-center justify-center py-20 text-gray-400">
-          <div className="w-8 h-8 border-2 border-tiscali-200 border-t-tiscali-600 rounded-full animate-spin mb-3" />
-          <p className="text-sm">Caricamento materiali...</p>
+        <div className="flex items-center gap-3 mb-4 text-sm text-gray-500">
+          <div className="w-4 h-4 border-2 border-tiscali-200 border-t-tiscali-600 rounded-full animate-spin" />
+          <span>Caricamento materiali dal cloud...</span>
         </div>
       )}
 
       {errore === 'token_missing' && (
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-          <p className="text-sm font-bold text-amber-800 mb-3">⚙️ Configurazione necessaria</p>
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-4">
+          <p className="text-sm font-bold text-amber-800 mb-3">⚙️ Configurazione cloud necessaria</p>
           <div className="text-xs text-amber-700 space-y-1">
+            <p>I loghi sono sempre disponibili (statici). Per vedere anche i materiali dal cloud:</p>
             <p>1. Vai su <strong>vercel.com → tiscali-e2k → Settings → Environment Variables</strong></p>
             <p>2. Aggiungi la variabile: <code className="bg-amber-100 px-1 rounded font-mono">VITE_BLOB_TOKEN</code></p>
             <p>3. Valore: il tuo <code className="bg-amber-100 px-1 rounded font-mono">BLOB_READ_WRITE_TOKEN</code></p>
@@ -177,23 +222,21 @@ export default function Multimedia() {
       )}
 
       {errore === 'fetch_error' && (
-        <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-          <p className="text-sm text-red-700">Impossibile caricare i materiali. Controlla la connessione.</p>
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4">
+          <p className="text-sm text-red-700">Impossibile caricare i materiali dal cloud. I loghi sono comunque disponibili sotto.</p>
         </div>
       )}
 
-      {!loading && !errore && visibili.length === 0 && (
+      {visibili.length === 0 && !loading && (
         <div className="flex flex-col items-center justify-center py-20 text-center">
           <span className="text-5xl mb-3">📭</span>
           <p className="text-gray-500 text-sm">
-            {files.length === 0
-              ? 'Nessun materiale ancora caricato. Usa script/upload-promo.js per aggiungere file.'
-              : 'Nessun file corrisponde ai filtri.'}
+            Nessun file corrisponde ai filtri.
           </p>
         </div>
       )}
 
-      {!loading && !errore && visibili.length > 0 && (
+      {visibili.length > 0 && (
         <>
           <p className="text-xs text-gray-400 mb-3">{visibili.length} file disponibili</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
