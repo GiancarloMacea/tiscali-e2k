@@ -64,4 +64,17 @@
       padding-right: max(2rem, env(safe-area-inset-right));
     }
   }
+
+  /* Animazione slide-up usata dal banner InstallPrompt
+     Generato con AI Claude · Aprile 2026 */
+  @keyframes slide-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }

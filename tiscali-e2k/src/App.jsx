@@ -4,6 +4,7 @@ import Configuratore from './components/Configuratore.jsx';
 import Multimedia from './components/Multimedia.jsx';
 import ContattiSupporto from './components/ContattiSupporto.jsx';
 import NotificaMese from './components/NotificaMese.jsx';
+import InstallPrompt from './components/InstallPrompt.jsx';
 
 // ─────────────────────────────────────────────────────────────────────
 // ErrorBoundary · Generato con AI Claude · Aprile 2026
@@ -192,6 +193,10 @@ export default function App() {
     <div className="min-h-screen flex flex-col overflow-x-hidden" style={{ backgroundColor: '#F2F2F2' }}>
       <ErrorBoundary label="Notifica mese non disponibile">
         <NotificaMese />
+      </ErrorBoundary>
+
+      <ErrorBoundary label="Prompt installazione non disponibile">
+        <InstallPrompt />
       </ErrorBoundary>
 
       {/* ── HEADER BIANCO con logo ── */}
