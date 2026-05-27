@@ -370,7 +370,7 @@ function BannerConcorsoOF() {
 
   const steps = [
     { n: 1, testo: 'Verifica copertura su Open Fiber', link: 'https://openfiber.it/vinci-buono-4/' },
-    { n: 2, testo: 'Verifica copertura + inserisci contratto fibra FTTH su sito Tiscali', link: null },
+    { n: 2, testo: 'Verifica copertura su Station Tiscali + inserisci contratto fibra FTTH', link: null },
     { n: 3, testo: 'Dopo attivazione: il cliente compila il form sul sito OF', link: 'https://openfiber.it/richiedi-buono-regalo/' },
     { n: 4, testo: 'OF invia email con codice al cliente', link: null },
     { n: 5, testo: 'Il cliente sceglie il voucher sul sito di ritiro', link: 'https://ritirailtuopremio.openfiber.it/' },
