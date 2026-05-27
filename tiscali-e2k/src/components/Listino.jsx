@@ -359,6 +359,145 @@ function Sezione({ titolo, icon, offerte, aperta, onToggle, cerca, logoLinkem, l
   );
 }
 
+// ── Banner Concorso Open Fiber "La Fibra che ti premia" ───────────────────────
+// Generato con AI Claude · Maggio 2026
+// Mostra solo nel tab Residenziale. Espandibile/collassabile.
+// Concorso valido: 4 maggio – 31 dicembre 2026 · Premio: voucher €100
+function BannerConcorsoOF() {
+  const [aperto, setAperto] = useState(true);
+
+  const partner = ['🛒 Amazon', '🖥 MediaWorld', '⛽ Eni / Q8', '🛍 Coop', '🛒 Conad'];
+
+  const steps = [
+    { n: 1, testo: 'Verifica copertura su Open Fiber', link: 'https://openfiber.it/vinci-buono-4/' },
+    { n: 2, testo: 'Verifica copertura + inserisci contratto fibra FTTH su sito Tiscali', link: null },
+    { n: 3, testo: 'Dopo attivazione: il cliente compila il form sul sito OF', link: 'https://openfiber.it/richiedi-buono-regalo/' },
+    { n: 4, testo: 'OF invia email con codice al cliente', link: null },
+    { n: 5, testo: 'Il cliente sceglie il voucher sul sito di ritiro', link: 'https://ritirailtuopremio.openfiber.it/' },
+  ];
+
+  return (
+    <div className="mb-6 rounded-2xl overflow-hidden shadow-lg border border-amber-200">
+      {/* Header sempre visibile */}
+      <button
+        onClick={() => setAperto(p => !p)}
+        className="w-full text-left"
+        style={{ background: 'linear-gradient(90deg, #f59e0b 0%, #f97316 60%, #ea580c 100%)' }}
+      >
+        <div className="px-4 py-3 flex items-center gap-3">
+          <span className="text-2xl">🎁</span>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-white font-bold text-sm tracking-wide">LO SAI CHE? — Concorso Open Fiber attivo</span>
+              <span className="bg-white bg-opacity-25 text-white text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap">
+                fino al 31/12/2026
+              </span>
+            </div>
+            <p className="text-orange-100 text-xs mt-0.5">
+              Ogni nuova attivazione FTTH nelle Aree Bianche vale un voucher da <strong className="text-white">€100</strong>
+            </p>
+          </div>
+          <div className="flex-shrink-0 text-white opacity-80">
+            <svg className={`w-5 h-5 transition-transform duration-200 ${aperto ? 'rotate-180' : ''}`}
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </button>
+
+      {/* Corpo espandibile */}
+      {aperto && (
+        <div className="bg-amber-50 px-4 py-4 space-y-4">
+
+          {/* Info chiave */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { label: 'Premio', valore: 'Voucher €100', icona: '🎫' },
+              { label: 'Tecnologia', valore: 'Solo FTTH', icona: '📡' },
+              { label: 'Clienti', valore: 'Solo persone fisiche', icona: '👤' },
+              { label: 'Scad. richiesta premio', valore: '31 gen 2027', icona: '📅' },
+            ].map(item => (
+              <div key={item.label} className="bg-white rounded-xl border border-amber-200 px-3 py-2.5 text-center shadow-sm">
+                <div className="text-lg mb-0.5">{item.icona}</div>
+                <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">{item.label}</p>
+                <p className="text-xs font-bold text-gray-800 mt-0.5 leading-tight">{item.valore}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Partner voucher */}
+          <div>
+            <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wider mb-2">💳 Il cliente sceglie tra</p>
+            <div className="flex flex-wrap gap-2">
+              {partner.map(p => (
+                <span key={p} className="bg-white border border-amber-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Procedura */}
+          <div>
+            <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wider mb-2">📋 Come funziona</p>
+            <div className="space-y-2">
+              {steps.map(s => (
+                <div key={s.n} className="flex items-start gap-2.5">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full text-[11px] font-bold flex items-center justify-center text-white"
+                    style={{ backgroundColor: '#f97316' }}>
+                    {s.n}
+                  </span>
+                  <span className="text-xs text-gray-700 leading-relaxed flex-1">
+                    {s.testo}
+                    {s.link && (
+                      <button
+                        onClick={() => window.open(s.link, '_blank')}
+                        className="ml-1.5 text-orange-600 underline font-medium hover:text-orange-800 transition-colors"
+                      >
+                        →
+                      </button>
+                    )}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Note importanti + link regolamento */}
+          <div className="bg-white border border-amber-200 rounded-xl p-3 space-y-1.5">
+            <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wider mb-1">⚠️ Note per il Partner</p>
+            {[
+              'Il processo è gestito interamente da Open Fiber — nessun coinvolgimento Tiscali verso il cliente finale',
+              'Valide solo nuove attivazioni o portabilità da tecnologia diversa (NO migrazione da FTTH OF già attivo)',
+              'Escluse Partite IVA, PA e minorenni',
+              'Il cliente può richiedere tanti premi quante sono le borchie ottiche attivate',
+            ].map((nota, i) => (
+              <div key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                <span className="text-amber-500 flex-shrink-0 mt-px">—</span>
+                <span className="leading-relaxed">{nota}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer con link regolamento */}
+          <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
+            <p className="text-[10px] text-gray-400">
+              Iniziativa Open Fiber S.p.A. · D.P.R. 430/2001 · Montepremi €600.000
+            </p>
+            <button
+              onClick={() => window.open('https://openfiber.it/app/uploads/2026/05/OpenFiber_LaFibrachetipremia_Regolamento_2026.pdf', '_blank')}
+              className="text-[11px] font-semibold text-orange-600 hover:text-orange-800 underline transition-colors"
+            >
+              📄 Regolamento integrale →
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── LISTINO PRINCIPALE ────────────────────────────────────────────────────────
 export default function Listino() {
   const [segmento, setSegmento] = useState('residenziale');
@@ -448,6 +587,9 @@ export default function Listino() {
             className="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tiscali-500" />
         </div>
       </div>
+
+      {/* Banner concorso Open Fiber — solo residenziale */}
+      {segmento === 'residenziale' && <BannerConcorsoOF />}
 
       {/* Avviso IVA */}
       {segmento === 'business' && (
