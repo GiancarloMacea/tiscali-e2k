@@ -445,7 +445,7 @@ export default function Configuratore() {
   // ── SERVIZIO DETTAGLIO ──
   if (step === S.SRV_D && servizio) return (
     <div className="max-w-2xl w-full overflow-x-hidden">
-      <ServizioDettaglio servizio={servizio} onBack={() => setStep(S.SRV)} />
+      <ServizioDettaglio srv={servizio} onBack={() => setStep(S.SRV)} />
       <RicominciaBtn onClick={goHome} />
     </div>
   );
