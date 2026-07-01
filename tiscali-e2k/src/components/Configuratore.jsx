@@ -347,8 +347,8 @@ export default function Configuratore() {
   if (step === S.HOME) return (
     <div>
       <div className="mb-6">
-        <h2 className="font-condensed text-3xl font-bold text-gray-900 mb-1">Configuratore Tiscali</h2>
-        <p className="text-sm text-gray-500">Seleziona la tipologia per iniziare.</p>
+        <h2 className="font-condensed text-3xl font-bold text-gray-900 mb-1">Info e Configuratore</h2>
+        <p className="text-sm text-gray-500">Guida, offerte e dettagli operativi — seleziona per iniziare.</p>
       </div>
       <div className="flex flex-col gap-3 max-w-2xl">
         {HOME_VOCI.map(v => (

@@ -202,7 +202,7 @@ export const DATI = {
           '🔄 Cos\'è l\'attivazione': 'Per questa offerta l\'attivazione commerciale è inclusa nel canone mensile — nessun costo aggiuntivo.',
           'AXA Casa': 'Intervento professionista (Elettricista, Fabbro, ecc.). Fino a 200€/sinistro, max 3 sinistri/anno. Copertura albergo per inagibilità fino a 1.500€.',
           'AXA Digitale': 'Fino a 2 interventi/anno per Apparati Mobile e 3 interventi/anno per Apparati Home.',
-          'Chiamate internazionali': '60 min/mese gratuiti verso rete fissa EU, Svizzera, UK, USA e Canada.',
+          'Chiamate internazionali': '60 min/mese gratuiti verso rete fissa EU, Svizzera, USA e Canada.',
           'Promozione': 'Prezzo promo per i primi 12 mesi. Dal 13° mese: 27,90€/mese.',
         },
         postille: ["* Prezzo promo 22,90€/mese per i primi 12 mesi. Dal 13° mese: 27,90€/mese.", "Installazione: 29,90€ Una Tantum in prima fattura.", "Attivazione commerciale: inclusa nel canone.", "In caso di cessazione entro 24 mesi: 1 mensilità + rate residue."],
@@ -591,7 +591,7 @@ export const DATI = {
           titolo: 'Chiamate internazionali incluse nel Fisso',
           voci: [
             '60 minuti/mese gratuiti verso numeri fissi internazionali',
-            'Paesi inclusi: Unione Europea, UK, Svizzera, USA, Canada',
+            'Paesi inclusi: Unione Europea, Svizzera, USA, Canada',
             'Valido per tutte le offerte residenziali e business con fisso',
           ],
         },

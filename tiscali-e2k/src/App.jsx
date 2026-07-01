@@ -163,7 +163,7 @@ function NavTabs({ tabs, active, onChange }) {
 
 const TABS = [
   { id: 'listino',       label: 'Listino',       icon: '📋' },
-  { id: 'configuratore', label: 'Configuratore', icon: '⚙️' },
+  { id: 'configuratore', label: 'Info e Configuratore', icon: '⚙️' },
   { id: 'contatti',      label: 'Contatti',      icon: '📞' },
   { id: 'multimedia',    label: 'Materiali',      icon: '📁' },
 ];
