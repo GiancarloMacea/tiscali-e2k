@@ -615,6 +615,44 @@ export const DATI = {
       ],
     },
     {
+      id: 'srv-roaming-uk', nome: 'Roaming Regno Unito (UK) — Novità 01/07/2026', icon: '🇬🇧',
+      sezioni: [
+        {
+          titolo: 'Cosa cambia dal 01/07/2026',
+          voci: [
+            'Dal 01/07/2026, in seguito all\'uscita del Regno Unito dall\'Unione Europea e all\'Accordo sugli scambi commerciali e la cooperazione tra UE e Regno Unito, entrano in vigore nuove condizioni tariffarie.',
+            'Riguardano il traffico roaming nel Regno Unito e il traffico internazionale dall\'Italia verso numerazioni fisse e mobili del Regno Unito.',
+            'Si applicano a tutti i piani tariffari prepagati, salvo la presenza di offerte specifiche già attive sulla linea del cliente.',
+          ],
+        },
+        {
+          titolo: '🇬🇧 TISCALI TRAVEL UK — Dati',
+          voci: [
+            '3 GB di traffico dati in roaming nel Regno Unito',
+            '4,99 € — validi per 7 giorni',
+          ],
+        },
+        {
+          titolo: '🇬🇧 TISCALI TRAVEL UK Voce',
+          voci: [
+            '60 minuti di chiamate in uscita (verso Italia e Regno Unito)',
+            '60 minuti di chiamate ricevute',
+            '10 SMS',
+            '2,99 € — validi per 7 giorni',
+          ],
+        },
+        {
+          titolo: 'Attivazione e disponibilità',
+          voci: [
+            'I nuovi pacchetti sostituiscono quelli attualmente disponibili.',
+            'Inizialmente attivabili esclusivamente tramite SMS o Back Office.',
+            'Proposti automaticamente ai clienti al loro arrivo nei Paesi in cui l\'offerta è disponibile.',
+            'Successivamente saranno resi disponibili anche sugli altri canali di vendita, con addebito sul credito residuo della SIM.',
+          ],
+        },
+      ],
+    },
+    {
       id: 'srv-installazione', nome: 'Installazione e Attivazione Fibra', icon: '🔧',
       sezioni: [
         {
