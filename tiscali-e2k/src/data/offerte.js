@@ -17,7 +17,7 @@ export const DATI = {
         dettagli: {
           '📋 Riservata a': 'Portabilità da TUTTI gli operatori — inclusi TIM e Kena.',
           '🆕 Nuovo numero': 'NON attivabile. Per nuove numerazioni usare Mobile 200 GB 4G.',
-          'Roaming EU/UK': '8,93 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '8,93 GB disponibili in roaming EU.',
           'Rete': '5G.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -36,7 +36,7 @@ export const DATI = {
         dettagli: {
           '📋 Riservata a': 'Solo nuove attivazioni (nuovo numero). NON attivabile come portabilità.',
           '⚠️ Attenzione': 'Dati in 4G (non 5G), a differenza di tutte le altre offerte a 5,99€.',
-          'Roaming EU/UK': '8,93 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '8,93 GB disponibili in roaming EU.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
           'Servizi inclusi': 'Parental Control Safe Kids Free by Kaspersky incluso.',
@@ -54,7 +54,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '10€' },
         dettagli: {
           '📋 Riservata a': 'Portabilità da TIM o Kena Mobile esclusivamente. Modulo: "SOLO TIM KENA".',
-          'Roaming EU/UK': '11,91 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '11,91 GB disponibili in roaming EU.',
           'Rete': '5G fino a 250 Mbps in base alla copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -72,7 +72,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '10€' },
         dettagli: {
           '📋 Riservata a': 'Portabilità da tutti gli operatori ESCLUSI TIM e Kena. Modulo: "NO TIM KENA".',
-          'Roaming EU/UK': '11,91 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '11,91 GB disponibili in roaming EU.',
           'Rete': '5G fino a 250 Mbps in base alla copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -90,7 +90,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '10€' },
         dettagli: {
           '📋 Riservata a': 'Solo nuove attivazioni (nuovo numero). Modulo: "NO TIM KENA".',
-          'Roaming EU/UK': '11,91 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '11,91 GB disponibili in roaming EU.',
           'Rete': '5G fino a 250 Mbps in base alla copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -109,7 +109,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '15€' },
         dettagli: {
           '📋 Riservata a': 'Portabilità da TIM o Kena Mobile esclusivamente.',
-          'Roaming EU/UK': '16,38 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '16,38 GB disponibili in roaming EU.',
           'Rete': '5G fino a 1 Gbps o 2 Gbps in base alle aree di copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -127,7 +127,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '15€' },
         dettagli: {
           '📋 Riservata a': 'Portabilità da tutti gli operatori ESCLUSI TIM e Kena.',
-          'Roaming EU/UK': '16,38 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '16,38 GB disponibili in roaming EU.',
           'Rete': '5G fino a 1 Gbps o 2 Gbps in base alle aree di copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -145,7 +145,7 @@ export const DATI = {
         costi: { 'Attivazione': 'Gratis', 'SIM': '10€', 'Ricarica': '15€' },
         dettagli: {
           '📋 Riservata a': 'Solo nuove attivazioni (nuovo numero).',
-          'Roaming EU/UK': '16,38 GB disponibili in roaming EU e UK.',
+          'Roaming EU': '16,38 GB disponibili in roaming EU.',
           'Rete': '5G fino a 1 Gbps o 2 Gbps in base alle aree di copertura.',
           'Traffico extra soglia': 'Bloccato automaticamente. Sblocco tramite Area Clienti: 30 cent/MB.',
           'Pagamento': 'Ricarica automatica su RID/Carta. Mancato pagamento: ricarica manuale allo stesso prezzo.',
@@ -577,14 +577,14 @@ export const DATI = {
       id: 'srv-roaming', nome: 'Roaming UE e Internazionale', icon: '🌍',
       sezioni: [
         {
-          titolo: 'GB disponibili in roaming EU e UK — SIM Residenziali',
+          titolo: 'GB disponibili in roaming EU — SIM Residenziali',
           voci: [
-            'Mobile 5G/4G — portabilità (150 GB 5G): 8,93 GB in EU/UK',
-            'Mobile 5G/4G — nuovo numero (200 GB 4G): 8,93 GB in EU/UK',
-            'Mobile 250 GB 5G: 11,91 GB in EU/UK',
-            'Mobile 350 GB 5G: 16,38 GB in EU/UK',
-            'Convergente + Mobile 200 GB: 8,94 GB in EU/UK',
-            'Convergente + Mobile 350 GB 5G: 16,38 GB in EU/UK',
+            'Mobile 5G/4G — portabilità (150 GB 5G): 8,93 GB in EU',
+            'Mobile 5G/4G — nuovo numero (200 GB 4G): 8,93 GB in EU',
+            'Mobile 250 GB 5G: 11,91 GB in EU',
+            'Mobile 350 GB 5G: 16,38 GB in EU',
+            'Convergente + Mobile 200 GB: 8,94 GB in EU',
+            'Convergente + Mobile 350 GB 5G: 16,38 GB in EU',
           ],
         },
         {
