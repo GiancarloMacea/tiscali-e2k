@@ -913,7 +913,7 @@ export const DATI = {
         {
           titolo: '📋 Guida Completa Contatti',
           voci: [
-            'Documento ufficiale Tiscali con tutti i numeri, tasti IVR e orari aggiornati. https://hrnrvsxfpvaibq54.public.blob.vercel-storage.com/contatti/Riepilogo_contatti_supporto_per_Business_Partner-JSzX8C19xK49riZGUWpJf0nRjsXWDI.pdf',
+            'Documento ufficiale Tiscali con tutti i numeri, tasti IVR e orari aggiornati. /Riepilogo_contatti_supporto_per_Business_Partner.pdf',
           ],
         },
         {
