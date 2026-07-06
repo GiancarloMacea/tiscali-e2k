@@ -567,7 +567,7 @@ export const DATI = {
         {
           titolo: 'Documentazione ufficiale',
           voci: [
-            'Set Informativo: casa.tiscali.it/doc/caratteristiche-offerta/SetInformativo_AXA.pdf',
+            'Set Informativo: https://casa.tiscali.it/doc/caratteristiche-offerta/SetInformativo_AXA.pdf',
             'Informativa Privacy AXA disponibile su sito Tiscali',
           ],
         },
