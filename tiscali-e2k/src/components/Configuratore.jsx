@@ -17,14 +17,19 @@ const CAT_VOCI = {
   residenziale: [
     { id: 'mobile',      label: 'Mobile',          sub: 'SIM 5G/4G · da 1,99€/mese',          icon: '📱' },
     { id: 'fisso',       label: 'Fisso Fibra FTTH', sub: 'FTTH fino a 2.5 Gbps · da 19,90€/mese', icon: '📡' },
+    { id: 'fttc',        label: 'Casa Ultrainternet FTTC', sub: 'FTTC fino a 200 Mega · da 19,90€/mese', icon: '🔌' },
+    { id: 'fwa5g',       label: 'Casa FWA 5G',     sub: 'FWA 5G fino a 300 Mega · da 19,90€/mese', icon: '📶' },
     { id: 'fwa-indoor',  label: 'Linkem FWA Indoor',  sub: '5G Indoor · da 14,90€/mese*', icon: '📶' },
     { id: 'fwa-outdoor', label: 'Linkem FWA Outdoor', sub: '5G Outdoor + 4G · da 14,90€/mese*', icon: '📡' },
     { id: 'convergente', label: 'Fisso + Mobile',  sub: 'Prezzo garantito · da 23,90€/mese',   icon: '🔗' },
   ],
   business: [
     { id: 'mobile',      label: 'Mobile Business', sub: 'SIM aziendali 5G/4G · da 1,99€+IVA/mese', icon: '📱' },
-    { id: 'fisso',       label: 'Fisso Business',  sub: 'FTTH/FTTC Business · da 24,90€+IVA/mese',  icon: '📡' },
-    { id: 'convergente', label: 'Fisso + Mobile',  sub: 'Convergente Business · 24,90€+IVA/mese',    icon: '🔗' },
+    { id: 'fisso',       label: 'Fisso Business FTTH',  sub: 'FTTH fino a 2.5 Gbps · da 24,90€+IVA', icon: '📡' },
+    { id: 'fttc',        label: 'Business Ultrainternet FTTC', sub: 'FTTC 200 Mega · da 24,90€+IVA', icon: '🔌' },
+    { id: 'fwa5g',       label: 'Business FWA 5G',  sub: 'FWA 5G 300 Mega · da 24,90€+IVA', icon: '📶' },
+    { id: 'duelinee',    label: 'Business 2 Linee', sub: 'FTTC 2 linee + centralino · da 35,90€+IVA', icon: '☎️' },
+    { id: 'convergente', label: 'Fisso + Mobile',  sub: 'Business Fibra Affari · 24,90€+IVA',    icon: '🔗' },
   ],
 };
 
@@ -323,7 +328,9 @@ export default function Configuratore() {
     if (seg === 'premium') return DATI.premium;
     if (seg === 'residenziale') {
       if (cat === 'mobile')      return DATI.residenziale.mobile;
-      if (cat === 'fisso')       return DATI.residenziale.fisso.filter(o => !o.id?.startsWith('res-fwa'));
+      if (cat === 'fisso')       return DATI.residenziale.fisso.filter(o => o.tecnologia === 'FTTH');
+      if (cat === 'fttc')        return DATI.residenziale.fisso.filter(o => o.tecnologia === 'FTTC');
+      if (cat === 'fwa5g')       return DATI.residenziale.fisso.filter(o => o.tecnologia === 'FWA5G');
       if (cat === 'fwa-indoor')  return DATI.residenziale.fisso.filter(o => o.indoor === true);
       if (cat === 'fwa-outdoor') return DATI.residenziale.fisso.filter(o => o.id?.startsWith('res-fwa') && o.indoor === false);
       if (cat === 'convergente') return DATI.residenziale.convergente;
@@ -331,8 +338,10 @@ export default function Configuratore() {
     }
     if (seg === 'business') {
       if (cat === 'mobile')      return DATI.business.mobile;
-      if (cat === 'fisso')       return DATI.business.fisso.filter(o => !o.id?.startsWith('biz-fwa') && o.id !== 'biz-fis-2');
-      if (cat === 'fwa')         return DATI.business.fisso.filter(o => o.id?.startsWith('biz-fwa'));
+      if (cat === 'fisso')       return DATI.business.fisso.filter(o => o.tecnologia === 'FTTH');
+      if (cat === 'fttc')        return DATI.business.fisso.filter(o => o.tecnologia === 'FTTC');
+      if (cat === 'fwa5g')       return DATI.business.fisso.filter(o => o.tecnologia === 'FWA5G');
+      if (cat === 'duelinee')    return DATI.business.fisso.filter(o => o.tecnologia === '2LINEE');
       if (cat === 'convergente') return DATI.business.fisso.filter(o => o.id === 'biz-fis-2');
       return DATI.business[cat] || [];
     }
@@ -341,7 +350,7 @@ export default function Configuratore() {
 
   // Breadcrumb
   const segLabel = { residenziale: 'Residenziale', business: 'Business', premium: 'Business Premium' };
-  const catLabel = { mobile: 'Mobile', fisso: 'Fisso', fwa: 'Linkem FWA', 'fwa-indoor': 'Linkem FWA Indoor', 'fwa-outdoor': 'Linkem FWA Outdoor', convergente: 'Fisso + Mobile' };
+  const catLabel = { mobile: 'Mobile', fisso: 'Fisso Fibra FTTH', fttc: 'Ultrainternet FTTC', fwa5g: 'FWA 5G', duelinee: 'Business 2 Linee', fwa: 'Linkem FWA', 'fwa-indoor': 'Linkem FWA Indoor', 'fwa-outdoor': 'Linkem FWA Outdoor', convergente: 'Fisso + Mobile' };
 
   // ── HOME ──
   if (step === S.HOME) return (

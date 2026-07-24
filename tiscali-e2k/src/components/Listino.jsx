@@ -510,7 +510,9 @@ export default function Listino() {
 
   // Sezioni per segmento
   const fwaRes = DATI.residenziale.fisso.filter(o => o.id && o.id.startsWith('res-fwa'));
-  const fissoRes = DATI.residenziale.fisso.filter(o => !o.id || !o.id.startsWith('res-fwa'));
+  const fissoFTTH  = DATI.residenziale.fisso.filter(o => o.tecnologia === 'FTTH');
+  const fissoFTTC  = DATI.residenziale.fisso.filter(o => o.tecnologia === 'FTTC');
+  const fissoFWA5G = DATI.residenziale.fisso.filter(o => o.tecnologia === 'FWA5G');
 
   const sezioniRes = [
     { titolo: 'Fisso + Mobile — Bundle Convergente', icon: '🔗', offerte: DATI.residenziale.convergente, evidenziata: true },
@@ -534,20 +536,26 @@ export default function Listino() {
       icon: '🏠',
       offerte: DATI.residenziale.mobile.filter(o => o.prezzo === 1.99),
     },
-    { titolo: 'Fisso Fibra FTTH',        icon: '📡', offerte: fissoRes },
+    { titolo: 'Fisso Fibra FTTH',        icon: '📡', offerte: fissoFTTH },
+    { titolo: 'Fisso Ultrainternet FTTC', icon: '🔌', offerte: fissoFTTC },
+    { titolo: 'Casa FWA 5G Tiscali',     icon: '📶', offerte: fissoFWA5G },
     { titolo: 'Linkem FWA 5G Indoor',    icon: '📶', offerte: fwaRes.filter(o => o.indoor === true), logoLinkem: true },
     { titolo: 'Linkem FWA 5G Outdoor',   icon: '📶', offerte: fwaRes.filter(o => o.indoor === false && o.id !== 'res-fwa-4g'), logoLinkem: false },
     { titolo: 'Linkem FWA 4G',           icon: '📶', offerte: fwaRes.filter(o => o.id === 'res-fwa-4g'), logoLinkem: false },
   ];
 
-  const fwaBiz = DATI.business.fisso.filter(o => o.id && o.id.startsWith('biz-fwa'));
-  const fissoBiz = DATI.business.fisso.filter(o => !o.id || !o.id.startsWith('biz-fwa'));
+  const fissoBizFTTH  = DATI.business.fisso.filter(o => o.tecnologia === 'FTTH');
+  const fissoBizFTTC  = DATI.business.fisso.filter(o => o.tecnologia === 'FTTC');
+  const fissoBizFWA5G = DATI.business.fisso.filter(o => o.tecnologia === 'FWA5G');
+  const fissoBiz2Linee = DATI.business.fisso.filter(o => o.tecnologia === '2LINEE');
 
   const sezoniBiz = [
     { titolo: 'Mobile Business',         icon: '📱', offerte: DATI.business.mobile },
-    { titolo: 'Fisso Business FTTH',     icon: '📡', offerte: fissoBiz.filter(o => o.id !== 'biz-fis-2') },
-    { titolo: 'Fisso + Mobile',          icon: '🔗', offerte: fissoBiz.filter(o => o.id === 'biz-fis-2') },
-    { titolo: 'Linkem FWA 5G',            icon: '📶', offerte: fwaBiz },
+    { titolo: 'Fisso Business FTTH',     icon: '📡', offerte: fissoBizFTTH },
+    { titolo: 'Business Ultrainternet FTTC', icon: '🔌', offerte: fissoBizFTTC },
+    { titolo: 'Business FWA 5G',         icon: '📶', offerte: fissoBizFWA5G },
+    { titolo: 'Fisso + Mobile',          icon: '🔗', offerte: DATI.business.fisso.filter(o => o.id === 'biz-fis-2') },
+    { titolo: 'Business Voce — 2 Linee', icon: '☎️', offerte: fissoBiz2Linee },
     { titolo: 'Premium + Backup LTE',    icon: '🛡️', offerte: DATI.premium },
   ];
 
@@ -558,7 +566,7 @@ export default function Listino() {
       {/* Header */}
       <div className="mb-6">
         <h2 className="font-condensed text-3xl font-bold text-gray-900 mb-1">Listino Offerte</h2>
-        <p className="text-sm text-gray-500">Clicca su un'offerta per vedere tutti i dettagli. Aprile 2026.</p>
+        <p className="text-sm text-gray-500">Clicca su un'offerta per vedere tutti i dettagli. Luglio 2026.</p>
       </div>
 
       {/* Toggle segmento */}
@@ -616,7 +624,7 @@ export default function Listino() {
       ))}
 
       <p className="text-xs text-gray-400 mt-4 leading-relaxed">
-        Offerte soggette a variazioni. Verificare disponibilità copertura prima dell'attivazione. Aprile 2026 — E2K Area Manager Tool.
+        Offerte soggette a variazioni. Verificare disponibilità copertura prima dell'attivazione. Luglio 2026 — E2K Area Manager Tool.
       </p>
     </div>
   );
